@@ -1,10 +1,10 @@
 /*!
  * jQuery serializeObject - v0.2-wp - 1/20/2010
- * http://benalman.com/projects/jquery-misc-plugins/
+ * //benalman.com/projects/jquery-misc-plugins/
  *
  * Copyright (c) 2010 "Cowboy" Ben Alman
  * Dual licensed under the MIT and GPL licenses.
- * http://benalman.com/about/license/
+ * //benalman.com/about/license/
  */
 
 // Whereas .serializeArray() serializes a form into an array, .serializeObject()

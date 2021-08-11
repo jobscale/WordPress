@@ -37,8 +37,8 @@
  * @author Ryan Parman
  * @author Sam Sneddon
  * @author Ryan McCue
- * @link http://simplepie.org/ SimplePie
- * @license http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @link //simplepie.org/ SimplePie
+ * @license //www.opensource.org/licenses/bsd-license.php BSD License
  */
 
 
@@ -138,7 +138,7 @@ class SimplePie_Caption
 	/**
 	 * Get the language
 	 *
-	 * @link http://tools.ietf.org/html/rfc3066
+	 * @link //tools.ietf.org/html/rfc3066
 	 * @return string|null Language code as per RFC 3066
 	 */
 	public function get_language()

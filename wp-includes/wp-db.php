@@ -2,7 +2,7 @@
 /**
  * WordPress database access abstraction class
  *
- * Original code from {@link http://php.justinvincent.com Justin Vincent (justin@visunet.ie)}
+ * Original code from {@link //php.justinvincent.com Justin Vincent (justin@visunet.ie)}
  *
  * @package WordPress
  * @subpackage Database

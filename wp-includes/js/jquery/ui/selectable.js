@@ -1,17 +1,17 @@
 /*!
  * jQuery UI Selectable 1.12.1
- * http://jqueryui.com
+ * //jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * //jquery.org/license
  */
 
 //>>label: Selectable
 //>>group: Interactions
 //>>description: Allows groups of elements to be selected with the mouse.
-//>>docs: http://api.jqueryui.com/selectable/
-//>>demos: http://jqueryui.com/selectable/
+//>>docs: //api.jqueryui.com/selectable/
+//>>demos: //jqueryui.com/selectable/
 //>>css.structure: ../../themes/base/selectable.css
 
 ( function( factory ) {

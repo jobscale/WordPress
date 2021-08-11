@@ -32,11 +32,11 @@
  * @package IXR
  * @since 1.5.0
  *
- * @copyright  Incutio Ltd 2010 (http://www.incutio.com)
+ * @copyright  Incutio Ltd 2010 (//www.incutio.com)
  * @version    1.7.4 7th September 2010
  * @author     Simon Willison
- * @link       http://scripts.incutio.com/xmlrpc/ Site/manual
- * @license    http://www.opensource.org/licenses/bsd-license.php BSD
+ * @link       //scripts.incutio.com/xmlrpc/ Site/manual
+ * @license    //www.opensource.org/licenses/bsd-license.php BSD
  */
 
 require_once ABSPATH . WPINC . '/IXR/class-IXR-server.php';

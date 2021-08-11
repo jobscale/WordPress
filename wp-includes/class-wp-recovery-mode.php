@@ -461,7 +461,7 @@ class WP_Recovery_Mode {
 			require_once ABSPATH . WPINC . '/pluggable.php';
 		}
 
-		$scheme = is_ssl() ? 'https://' : 'http://';
+		$scheme = is_ssl() ? 'https://' : '//';
 
 		$url = "{$scheme}{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 		wp_safe_redirect( $url );

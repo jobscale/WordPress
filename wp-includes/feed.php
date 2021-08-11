@@ -572,7 +572,7 @@ function atom_enclosure() {
  *
  * Container div tags are added to XHTML values, per section 3.1.1.3.
  *
- * @link http://www.atomenabled.org/developers/syndication/atom-format-spec.php#rfc.section.3.1
+ * @link //www.atomenabled.org/developers/syndication/atom-format-spec.php#rfc.section.3.1
  *
  * @since 2.5.0
  *
@@ -600,7 +600,7 @@ function prep_atom_text_construct( $data ) {
 		if ( strpos( $data, '<' ) === false ) {
 			return array( 'text', $data );
 		} else {
-			$data = "<div xmlns='http://www.w3.org/1999/xhtml'>$data</div>";
+			$data = "<div xmlns='//www.w3.org/1999/xhtml'>$data</div>";
 			return array( 'xhtml', $data );
 		}
 	}
@@ -659,7 +659,7 @@ function rss2_site_icon() {
  */
 function get_self_link() {
 	$host = parse_url( home_url() );
-	return set_url_scheme( 'http://' . $host['host'] . wp_unslash( $_SERVER['REQUEST_URI'] ) );
+	return set_url_scheme( '//' . $host['host'] . wp_unslash( $_SERVER['REQUEST_URI'] ) );
 }
 
 /**
@@ -781,7 +781,7 @@ function feed_content_type( $type = '' ) {
  *
  * @param string|string[] $url URL of feed to retrieve. If an array of URLs, the feeds are merged
  *                             using SimplePie's multifeed feature.
- *                             See also {@link http://simplepie.org/wiki/faq/typical_multifeed_gotchas}
+ *                             See also {@link //simplepie.org/wiki/faq/typical_multifeed_gotchas}
  * @return SimplePie|WP_Error SimplePie object on success or WP_Error object on failure.
  */
 function fetch_feed( $url ) {

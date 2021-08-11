@@ -731,7 +731,7 @@ class WP_REST_Widgets_Controller extends WP_REST_Controller {
 		}
 
 		$this->schema = array(
-			'$schema'    => 'http://json-schema.org/draft-04/schema#',
+			'$schema'    => '//json-schema.org/draft-04/schema#',
 			'title'      => 'widget',
 			'type'       => 'object',
 			'properties' => array(

@@ -4,7 +4,7 @@
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at https://github.com/JamesHeinrich/getID3       //
 //            or https://www.getid3.org                        //
-//            or http://getid3.sourceforge.net                 //
+//            or //getid3.sourceforge.net                 //
 //  see readme.txt for more details                            //
 /////////////////////////////////////////////////////////////////
 //                                                             //
@@ -20,7 +20,7 @@ if (!defined('GETID3_INCLUDEPATH')) { // prevent path-exposing attacks that acce
 
 define('EBML_ID_CHAPTERS',                  0x0043A770); // [10][43][A7][70] -- A system to define basic menus and partition data. For more detailed information, look at the Chapters Explanation.
 define('EBML_ID_SEEKHEAD',                  0x014D9B74); // [11][4D][9B][74] -- Contains the position of other level 1 elements.
-define('EBML_ID_TAGS',                      0x0254C367); // [12][54][C3][67] -- Element containing elements specific to Tracks/Chapters. A list of valid tags can be found <http://www.matroska.org/technical/specs/tagging/index.html>.
+define('EBML_ID_TAGS',                      0x0254C367); // [12][54][C3][67] -- Element containing elements specific to Tracks/Chapters. A list of valid tags can be found <//www.matroska.org/technical/specs/tagging/index.html>.
 define('EBML_ID_INFO',                      0x0549A966); // [15][49][A9][66] -- Contains miscellaneous general information and statistics on the file.
 define('EBML_ID_TRACKS',                    0x0654AE6B); // [16][54][AE][6B] -- A top-level block of information with many tracks described.
 define('EBML_ID_SEGMENT',                   0x08538067); // [18][53][80][67] -- This element contains all other top-level (level 1) elements. Typically a Matroska file is composed of 1 segment.
@@ -211,7 +211,7 @@ define('EBML_ID_CLUSTERREFERENCEVIRTUAL',         0x7D); //             [FD] -- 
 
 
 /**
-* @tutorial http://www.matroska.org/technical/specs/index.html
+* @tutorial //www.matroska.org/technical/specs/index.html
 *
 * @todo Rewrite EBML parser to reduce it's size and honor default element values
 * @todo After rewrite implement stream size calculation, that will provide additional useful info and enable AAC/FLAC audio bitrate detection
@@ -543,7 +543,7 @@ class getid3_matroska extends getid3_handler
 	 * @param array $info
 	 */
 	private function parseEBML(&$info) {
-		// http://www.matroska.org/technical/specs/index.html#EBMLBasics
+		// //www.matroska.org/technical/specs/index.html#EBMLBasics
 		$this->current_offset = $info['avdataoffset'];
 
 		while ($this->getEBMLelement($top_element, $info['avdataend'])) {
@@ -1475,8 +1475,8 @@ class getid3_matroska extends getid3_handler
 	 * @return array
 	 */
 	private function HandleEMBLClusterBlock($element, $block_type, &$info) {
-		// http://www.matroska.org/technical/specs/index.html#block_structure
-		// http://www.matroska.org/technical/specs/index.html#simpleblock_structure
+		// //www.matroska.org/technical/specs/index.html#block_structure
+		// //www.matroska.org/technical/specs/index.html#simpleblock_structure
 
 		$block_data = array();
 		$block_data['tracknumber'] = $this->readEBMLint();
@@ -1543,7 +1543,7 @@ class getid3_matroska extends getid3_handler
 	 * @return int|float|false
 	 */
 	private static function EBML2Int($EBMLstring) {
-		// http://matroska.org/specs/
+		// //matroska.org/specs/
 
 		// Element ID coded with an UTF-8 like system:
 		// 1xxx xxxx                                  - Class A IDs (2^7 -2 possible values) (base 0x8X)
@@ -1601,7 +1601,7 @@ class getid3_matroska extends getid3_handler
 	 * @return string|int
 	 */
 	public static function TargetTypeValue($target_type) {
-		// http://www.matroska.org/technical/specs/tagging/index.html
+		// //www.matroska.org/technical/specs/tagging/index.html
 		static $TargetTypeValue = array();
 		if (empty($TargetTypeValue)) {
 			$TargetTypeValue[10] = 'A: ~ V:shot';                                           // the lowest hierarchy found in music or movies
@@ -1621,7 +1621,7 @@ class getid3_matroska extends getid3_handler
 	 * @return string|int
 	 */
 	public static function BlockLacingType($lacingtype) {
-		// http://matroska.org/technical/specs/index.html#block_structure
+		// //matroska.org/technical/specs/index.html#block_structure
 		static $BlockLacingType = array();
 		if (empty($BlockLacingType)) {
 			$BlockLacingType[0x00] = 'no lacing';
@@ -1638,7 +1638,7 @@ class getid3_matroska extends getid3_handler
 	 * @return string
 	 */
 	public static function CodecIDtoCommonName($codecid) {
-		// http://www.matroska.org/technical/specs/codecid/index.html
+		// //www.matroska.org/technical/specs/codecid/index.html
 		static $CodecIDlist = array();
 		if (empty($CodecIDlist)) {
 			$CodecIDlist['A_AAC']            = 'aac';
@@ -1882,7 +1882,7 @@ class getid3_matroska extends getid3_handler
 	 * @return string
 	 */
 	public static function displayUnit($value) {
-		// http://www.matroska.org/technical/specs/index.html#DisplayUnit
+		// //www.matroska.org/technical/specs/index.html#DisplayUnit
 		static $units = array(
 			0 => 'pixels',
 			1 => 'centimeters',

@@ -8335,7 +8335,7 @@ CSSLint.addRule({
 
 /*
  * Rule: Use the bulletproof @font-face syntax to avoid 404's in old IE
- * (http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax)
+ * (//www.fontspring.com/blog/the-new-bulletproof-font-face-syntax)
  */
 
 CSSLint.addRule({
@@ -8343,7 +8343,7 @@ CSSLint.addRule({
     // rule information
     id: "bulletproof-font-face",
     name: "Use the bulletproof @font-face syntax",
-    desc: "Use the bulletproof @font-face syntax to avoid 404's in old IE (http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax).",
+    desc: "Use the bulletproof @font-face syntax to avoid 404's in old IE (//www.fontspring.com/blog/the-new-bulletproof-font-face-syntax).",
     url: "https://github.com/CSSLint/csslint/wiki/Bulletproof-font-face",
     browsers: "All",
 
@@ -8430,7 +8430,7 @@ CSSLint.addRule({
             arrayPush = Array.prototype.push,
             applyTo = [];
 
-        // See http://peter.sh/experiments/vendor-prefixed-css-property-overview/ for details
+        // See //peter.sh/experiments/vendor-prefixed-css-property-overview/ for details
         compatiblePrefixes = {
             "animation"                  : "webkit",
             "animation-delay"            : "webkit",
@@ -9176,7 +9176,7 @@ CSSLint.addRule({
 /*
  * Rule: IE6-9 supports up to 31 stylesheet import.
  * Reference:
- * http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx
+ * //blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx
  */
 
 CSSLint.addRule({

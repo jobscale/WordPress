@@ -437,7 +437,7 @@ function populate_options( array $options = array() ) {
 		'moderation_keys'                 => '',
 		'active_plugins'                  => array(),
 		'category_base'                   => '',
-		'ping_sites'                      => 'http://rpc.pingomatic.com/',
+		'ping_sites'                      => '//rpc.pingomatic.com/',
 		'comment_max_links'               => 2,
 		'gmt_offset'                      => $gmt_offset,
 
@@ -1077,7 +1077,7 @@ function populate_network( $network_id = 1, $domain = '', $email = '', $site_nam
 		$errstr   = '';
 		$hostname = substr( md5( time() ), 0, 6 ) . '.' . $domain; // Very random hostname!
 		$page     = wp_remote_get(
-			'http://' . $hostname,
+			'//' . $hostname,
 			array(
 				'timeout'     => 5,
 				'httpversion' => '1.1',

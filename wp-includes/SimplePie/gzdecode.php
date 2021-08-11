@@ -37,8 +37,8 @@
  * @author Ryan Parman
  * @author Sam Sneddon
  * @author Ryan McCue
- * @link http://simplepie.org/ SimplePie
- * @license http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @link //simplepie.org/ SimplePie
+ * @license //www.opensource.org/licenses/bsd-license.php BSD License
  */
 
 
@@ -47,7 +47,7 @@
  *
  * @package SimplePie
  * @subpackage HTTP
- * @link http://www.gzip.org/format.txt
+ * @link //www.gzip.org/format.txt
  */
 class SimplePie_gzdecode
 {

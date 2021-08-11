@@ -3,7 +3,7 @@ Contributors: the WordPress team
 Tested up to: 5.8
 Stable tag: 1.8
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: //www.gnu.org/licenses/gpl-2.0.html
 
 Default theme for 2020.
 
@@ -114,7 +114,7 @@ Used for TikTok social icon.
 
 Social Icons
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: //www.gnu.org/licenses/gpl-2.0.html
 Source: WordPress Social Link Block (See wp-includes\blocks\social-link.php)
 
 Code from Twenty Nineteen

@@ -2,7 +2,7 @@
  * Farbtastic: jQuery color picker plug-in v1.3u
  *
  * Licensed under the GPL license:
- *   http://www.gnu.org/licenses/gpl.html
+ *   //www.gnu.org/licenses/gpl.html
  */
 (function($) {
 

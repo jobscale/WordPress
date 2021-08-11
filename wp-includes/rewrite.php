@@ -557,7 +557,7 @@ function url_to_postid( $url ) {
 	}
 
 	if ( false !== strpos( trailingslashit( $url ), home_url( '/' ) ) ) {
-		// Chop off http://domain.com/[path].
+		// Chop off //domain.com/[path].
 		$url = str_replace( home_url(), '', $url );
 	} else {
 		// Chop off /path/to/blog.

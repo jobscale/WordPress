@@ -104,7 +104,7 @@
 	 * Makes "skip to content" link work correctly in IE9 and Chrome for better
 	 * accessibility.
 	 *
-	 * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
+	 * @link //www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
 	 */
 	_window.on( 'hashchange.twentythirteen', function() {
 		var element = document.getElementById( location.hash.substring( 1 ) );

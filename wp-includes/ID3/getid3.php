@@ -3,7 +3,7 @@
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at https://github.com/JamesHeinrich/getID3       //
 //            or https://www.getid3.org                        //
-//            or http://getid3.sourceforge.net                 //
+//            or //getid3.sourceforge.net                 //
 //                                                             //
 // Please see readme.txt for more information                  //
 //                                                            ///
@@ -298,7 +298,7 @@ class getID3
 
 		// phpcs:ignore PHPCompatibility.IniDirectives.RemovedIniDirectives.mbstring_func_overloadDeprecated
 		if (($mbstring_func_overload = (int) ini_get('mbstring.func_overload')) && ($mbstring_func_overload & 0x02)) {
-			// http://php.net/manual/en/mbstring.overload.php
+			// //php.net/manual/en/mbstring.overload.php
 			// "mbstring.func_overload in php.ini is a positive value that represents a combination of bitmasks specifying the categories of functions to be overloaded. It should be set to 1 to overload the mail() function. 2 for string functions, 4 for regular expression functions"
 			// getID3 cannot run when string functions are overloaded. It doesn't matter if mail() or ereg* functions are overloaded since getID3 does not use those.
 			// phpcs:ignore PHPCompatibility.IniDirectives.RemovedIniDirectives.mbstring_func_overloadDeprecated
@@ -1000,7 +1000,7 @@ class getID3
 							'mime_type' => 'application/octet-stream',
 						),
 
-				// TTA  - audio       - TTA Lossless Audio Compressor (http://tta.corecodec.org)
+				// TTA  - audio       - TTA Lossless Audio Compressor (//tta.corecodec.org)
 				'tta'  => array(
 							'pattern'   => '^TTA',  // could also be '^TTA(\\x01|\\x02|\\x03|2|1)'
 							'group'     => 'audio',
@@ -1208,7 +1208,7 @@ class getID3
 
 				// SVG  - still image - Scalable Vector Graphics (SVG)
 				'svg'  => array(
-							'pattern'   => '(<!DOCTYPE svg PUBLIC |xmlns="http://www\\.w3\\.org/2000/svg")',
+							'pattern'   => '(<!DOCTYPE svg PUBLIC |xmlns="//www\\.w3\\.org/2000/svg")',
 							'group'     => 'graphic',
 							'module'    => 'svg',
 							'mime_type' => 'image/svg+xml',
@@ -1658,7 +1658,7 @@ class getID3
 
 				if (!empty($VorbisCommentError)) {
 
-					$this->warning('Failed making system call to vorbiscomment(.exe) - '.$algorithm.'_data will be incorrect. If vorbiscomment is unavailable, please download from http://www.vorbis.com/download.psp and put in the getID3() directory. Error returned: '.$VorbisCommentError);
+					$this->warning('Failed making system call to vorbiscomment(.exe) - '.$algorithm.'_data will be incorrect. If vorbiscomment is unavailable, please download from //www.vorbis.com/download.psp and put in the getID3() directory. Error returned: '.$VorbisCommentError);
 					$this->info[$algorithm.'_data'] = false;
 
 				} else {
@@ -2056,7 +2056,7 @@ abstract class getid3_handler
 		* https://www.getid3.org/phpBB3/viewtopic.php?t=1930
 		* "I found out that the root cause for the problem was how getID3 uses the PHP system function fread().
 		* It seems to assume that fread() would always return as many bytes as were requested.
-		* However, according the PHP manual (http://php.net/manual/en/function.fread.php), this is the case only with regular local files, but not e.g. with Linux pipes.
+		* However, according the PHP manual (//php.net/manual/en/function.fread.php), this is the case only with regular local files, but not e.g. with Linux pipes.
 		* The call may return only part of the requested data and a new call is needed to get more."
 		*/
 		$contents = '';

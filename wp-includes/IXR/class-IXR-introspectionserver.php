@@ -19,7 +19,7 @@ class IXR_IntrospectionServer extends IXR_Server
         $this->setCallbacks();
         $this->setCapabilities();
         $this->capabilities['introspection'] = array(
-            'specUrl' => 'http://xmlrpc.usefulinc.com/doc/reserved.html',
+            'specUrl' => '//xmlrpc.usefulinc.com/doc/reserved.html',
             'specVersion' => 1
         );
         $this->addCallback(

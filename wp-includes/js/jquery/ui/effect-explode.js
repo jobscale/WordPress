@@ -1,10 +1,10 @@
 /*!
  * jQuery UI Effects Explode 1.12.1
- * http://jqueryui.com
+ * //jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * //jquery.org/license
  */
 
 //>>label: Explode Effect
@@ -12,8 +12,8 @@
 // jscs:disable maximumLineLength
 //>>description: Explodes an element in all directions into n pieces. Implodes an element to its original wholeness.
 // jscs:enable maximumLineLength
-//>>docs: http://api.jqueryui.com/explode-effect/
-//>>demos: http://jqueryui.com/effect/
+//>>docs: //api.jqueryui.com/explode-effect/
+//>>demos: //jqueryui.com/effect/
 
 ( function( factory ) {
 	if ( typeof define === "function" && define.amd ) {

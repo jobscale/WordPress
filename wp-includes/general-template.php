@@ -512,7 +512,7 @@ function wp_login_form( $args = array() ) {
 	$defaults = array(
 		'echo'           => true,
 		// Default 'redirect' value takes the user back to the request URI.
-		'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+		'redirect'       => ( is_ssl() ? 'https://' : '//' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
 		'form_id'        => 'loginform',
 		'label_username' => __( 'Username or Email Address' ),
 		'label_password' => __( 'Password' ),
@@ -3179,7 +3179,7 @@ function feed_links_extra( $args = array() ) {
 /**
  * Display the link to the Really Simple Discovery service endpoint.
  *
- * @link http://archipelago.phrasewise.com/rsd
+ * @link //archipelago.phrasewise.com/rsd
  * @since 2.0.0
  */
 function rsd_link() {
@@ -4113,7 +4113,7 @@ function language_attributes( $doctype = 'html' ) {
  * The 'total' argument is the total amount of pages and is an integer. The
  * 'current' argument is the current page number and is also an integer.
  *
- * An example of the 'base' argument is "http://example.com/all_posts.php%_%"
+ * An example of the 'base' argument is "//example.com/all_posts.php%_%"
  * and the '%_%' is required. The '%_%' will be replaced by the contents of in
  * the 'format' argument. An example for the 'format' argument is "?page=%#%"
  * and the '%#%' is also required. The '%#%' will be replaced with the page
@@ -4192,7 +4192,7 @@ function paginate_links( $args = '' ) {
 	$format .= $wp_rewrite->using_permalinks() ? user_trailingslashit( $wp_rewrite->pagination_base . '/%#%', 'paged' ) : '?paged=%#%';
 
 	$defaults = array(
-		'base'               => $pagenum_link, // http://example.com/all_posts.php%_% : %_% is replaced by format (below).
+		'base'               => $pagenum_link, // //example.com/all_posts.php%_% : %_% is replaced by format (below).
 		'format'             => $format, // ?page=%#% : %#% is replaced by the page number.
 		'total'              => $total,
 		'current'            => $current,

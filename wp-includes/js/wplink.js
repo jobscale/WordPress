@@ -91,12 +91,12 @@
 			inputs.url.on( 'blur', wpLink.correctURL );
 		},
 
-		// If URL wasn't corrected last time and doesn't start with http:, https:, ? # or /, prepend http://.
+		// If URL wasn't corrected last time and doesn't start with http:, https:, ? # or /, prepend //.
 		correctURL: function () {
 			var url = inputs.url.val().trim();
 
 			if ( url && correctedURL !== url && ! /^(?:[a-z]+:|#|\?|\.|\/)/.test( url ) ) {
-				inputs.url.val( 'http://' + url );
+				inputs.url.val( '//' + url );
 				correctedURL = url;
 			}
 		},

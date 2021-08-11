@@ -30,11 +30,11 @@ if ( isset( $HTTP_RAW_POST_DATA ) ) {
 /** Include the bootstrap for setting up WordPress environment */
 require_once __DIR__ . '/wp-load.php';
 
-if ( isset( $_GET['rsd'] ) ) { // http://cyber.law.harvard.edu/blogs/gems/tech/rsd.html
+if ( isset( $_GET['rsd'] ) ) { // //cyber.law.harvard.edu/blogs/gems/tech/rsd.html
 	header( 'Content-Type: text/xml; charset=' . get_option( 'blog_charset' ), true );
 	echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>';
 	?>
-<rsd version="1.0" xmlns="http://archipelago.phrasewise.com/rsd">
+<rsd version="1.0" xmlns="//archipelago.phrasewise.com/rsd">
 	<service>
 		<engineName>WordPress</engineName>
 		<engineLink>https://wordpress.org/</engineLink>
@@ -48,7 +48,7 @@ if ( isset( $_GET['rsd'] ) ) { // http://cyber.law.harvard.edu/blogs/gems/tech/r
 			/**
 			 * Add additional APIs to the Really Simple Discovery (RSD) endpoint.
 			 *
-			 * @link http://cyber.law.harvard.edu/blogs/gems/tech/rsd.html
+			 * @link //cyber.law.harvard.edu/blogs/gems/tech/rsd.html
 			 *
 			 * @since 3.5.0
 			 */

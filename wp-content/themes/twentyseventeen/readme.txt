@@ -3,7 +3,7 @@ Contributors: wordpressdotorg
 Tested up to: 5.8
 Version: 2.8
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: //www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns
 
 == Description ==
@@ -51,7 +51,7 @@ Source: https://necolas.github.io/normalize.css/
 
 Font Awesome icons, Copyright Dave Gandy
 License: SIL Open Font License, version 1.1.
-Source: http://fontawesome.io/
+Source: //fontawesome.io/
 
 Bundled header image, Copyright Alvin Engler
 License: CC0 1.0 Universal (CC0 1.0)

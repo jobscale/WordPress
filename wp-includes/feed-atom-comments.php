@@ -12,9 +12,9 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '" ?' . '
 do_action( 'rss_tag_pre', 'atom-comments' );
 ?>
 <feed
-	xmlns="http://www.w3.org/2005/Atom"
+	xmlns="//www.w3.org/2005/Atom"
 	xml:lang="<?php bloginfo_rss( 'language' ); ?>"
-	xmlns:thr="http://purl.org/syndication/thread/1.0"
+	xmlns:thr="//purl.org/syndication/thread/1.0"
 	<?php
 		/** This action is documented in wp-includes/feed-atom.php */
 		do_action( 'atom_ns' );

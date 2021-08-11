@@ -112,7 +112,7 @@ if (!is_callable('random_int')) {
              * We use ~0 as a mask in this case because it generates all 1s
              *
              * @ref https://eval.in/400356 (32-bit)
-             * @ref http://3v4l.org/XX9r5  (64-bit)
+             * @ref //3v4l.org/XX9r5  (64-bit)
              */
             $bytes = PHP_INT_SIZE;
             $mask = ~0;

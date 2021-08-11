@@ -10,7 +10,7 @@
 /**
  * Controller which provides REST endpoint for block patterns.
  *
- * This simply proxies the endpoint at http://api.wordpress.org/patterns/1.0/. That isn't necessary for
+ * This simply proxies the endpoint at //api.wordpress.org/patterns/1.0/. That isn't necessary for
  * functionality, but is desired for privacy. It prevents api.wordpress.org from knowing the user's IP address.
  *
  * @since 5.8.0
@@ -133,7 +133,7 @@ class WP_REST_Pattern_Directory_Controller extends WP_REST_Controller {
 		if ( ! $raw_patterns ) {
 			$api_url = add_query_arg(
 				array_map( 'rawurlencode', $query_args ),
-				'http://api.wordpress.org/patterns/1.0/'
+				'//api.wordpress.org/patterns/1.0/'
 			);
 
 			if ( wp_http_supports( array( 'ssl' ) ) ) {
@@ -244,7 +244,7 @@ class WP_REST_Pattern_Directory_Controller extends WP_REST_Controller {
 		}
 
 		$this->schema = array(
-			'$schema'    => 'http://json-schema.org/draft-04/schema#',
+			'$schema'    => '//json-schema.org/draft-04/schema#',
 			'title'      => 'pattern-directory-item',
 			'type'       => 'object',
 			'properties' => array(

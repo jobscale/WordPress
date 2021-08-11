@@ -5,8 +5,8 @@
  *
  * @package SimplePie
  * @author Jan Kozak <galvani78@gmail.com>
- * @link http://galvani.cz/
- * @license http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @link //galvani.cz/
+ * @license //www.opensource.org/licenses/bsd-license.php BSD License
  * @version 0.2.9
  */
 

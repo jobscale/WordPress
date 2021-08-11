@@ -4,7 +4,7 @@ Requires at least: WordPress 3.6
 Tested up to: 5.8
 Stable tag: 3.2
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: //www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready, block-patterns
 
 == Description ==
@@ -46,7 +46,7 @@ Source: https://github.com/aFarkas/html5shiv
 
 Genericons icon font, Copyright 2013-2017 Automattic.com
 License: GNU GPL, Version 2 (or later)
-Source: http://www.genericons.com
+Source: //www.genericons.com
 
 Photos from Stocksnap, used in block patterns.
 License: CC0

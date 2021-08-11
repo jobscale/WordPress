@@ -54,7 +54,7 @@ function wp_replace_insecure_home_url( $content ) {
 	}
 
 	$https_url = home_url( '', 'https' );
-	$http_url  = str_replace( 'https://', 'http://', $https_url );
+	$http_url  = str_replace( 'https://', '//', $https_url );
 
 	// Also replace potentially escaped URL.
 	$escaped_https_url = str_replace( '/', '\/', $https_url );
@@ -89,8 +89,8 @@ function wp_update_urls_to_https() {
 	$orig_siteurl = get_option( 'siteurl' );
 
 	// Get current URL options, replacing HTTP with HTTPS.
-	$home    = str_replace( 'http://', 'https://', $orig_home );
-	$siteurl = str_replace( 'http://', 'https://', $orig_siteurl );
+	$home    = str_replace( '//', 'https://', $orig_home );
+	$siteurl = str_replace( '//', 'https://', $orig_siteurl );
 
 	// Update the options.
 	update_option( 'home', $home );
@@ -128,7 +128,7 @@ function wp_update_https_migration_required( $old_url, $new_url ) {
 	}
 
 	// Delete/reset the option if the new URL is not the HTTPS version of the old URL.
-	if ( untrailingslashit( (string) $old_url ) !== str_replace( 'https://', 'http://', untrailingslashit( (string) $new_url ) ) ) {
+	if ( untrailingslashit( (string) $old_url ) !== str_replace( 'https://', '//', untrailingslashit( (string) $new_url ) ) ) {
 		delete_option( 'https_migration_required' );
 		return;
 	}

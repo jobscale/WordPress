@@ -505,9 +505,9 @@ var link = (function (domGlobals) {
             return;
           }
           if (assumeExternalTargets === true && !/^\w+:/i.test(href) || assumeExternalTargets === false && /^\s*www[\.|\d\.]/i.test(href)) {
-            delayedConfirm(editor, 'The URL you entered seems to be an external link. Do you want to add the required http:// prefix?', function (state) {
+            delayedConfirm(editor, 'The URL you entered seems to be an external link. Do you want to add the required // prefix?', function (state) {
               if (state) {
-                resultData.href = 'http://' + href;
+                resultData.href = '//' + href;
               }
               insertLink(resultData);
             });

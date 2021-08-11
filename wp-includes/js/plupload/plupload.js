@@ -5,8 +5,8 @@
  * Copyright 2013, Moxiecode Systems AB
  * Released under GPL License.
  *
- * License: http://www.plupload.com/license
- * Contributing: http://www.plupload.com/contributing
+ * License: //www.plupload.com/license
+ * Contributing: //www.plupload.com/contributing
  *
  * Date: 2016-05-15
  */
@@ -16,8 +16,8 @@
  * Copyright 2013, Moxiecode Systems AB
  * Released under GPL License.
  *
- * License: http://www.plupload.com/license
- * Contributing: http://www.plupload.com/contributing
+ * License: //www.plupload.com/license
+ * Contributing: //www.plupload.com/contributing
  */
 
 /**
@@ -274,7 +274,7 @@ var plupload = {
 
 	/**
 	 * Gets the true type of the built-in object (better version of typeof).
-	 * @credits Angus Croll (http://javascriptweblog.wordpress.com/)
+	 * @credits Angus Croll (//javascriptweblog.wordpress.com/)
 	 *
 	 * @method typeOf
 	 * @static

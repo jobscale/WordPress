@@ -44,7 +44,7 @@
 		 */
 		function browserSupportsSvgAsImage() {
 			if ( !! document.implementation.hasFeature ) {
-				return document.implementation.hasFeature( 'http://www.w3.org/TR/SVG11/feature#Image', '1.1' );
+				return document.implementation.hasFeature( '//www.w3.org/TR/SVG11/feature#Image', '1.1' );
 			}
 
 			// document.implementation.hasFeature is deprecated. It can be presumed

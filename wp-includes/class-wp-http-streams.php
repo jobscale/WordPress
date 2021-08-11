@@ -65,7 +65,7 @@ class WP_Http_Streams {
 			}
 		}
 
-		// Always pass a path, defaulting to the root in cases such as http://example.com.
+		// Always pass a path, defaulting to the root in cases such as //example.com.
 		if ( ! isset( $arrURL['path'] ) ) {
 			$arrURL['path'] = '/';
 		}

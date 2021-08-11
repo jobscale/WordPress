@@ -1,17 +1,17 @@
 /*!
  * jQuery UI Effects Clip 1.12.1
- * http://jqueryui.com
+ * //jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * //jquery.org/license
  */
 
 //>>label: Clip Effect
 //>>group: Effects
 //>>description: Clips the element on and off like an old TV.
-//>>docs: http://api.jqueryui.com/clip-effect/
-//>>demos: http://jqueryui.com/effect/
+//>>docs: //api.jqueryui.com/clip-effect/
+//>>demos: //jqueryui.com/effect/
 
 ( function( factory ) {
 	if ( typeof define === "function" && define.amd ) {

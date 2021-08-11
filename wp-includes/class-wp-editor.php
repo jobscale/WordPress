@@ -401,7 +401,7 @@ final class _WP_Editors {
 					 *
 					 * The url should be absolute, and should include the js filename
 					 * to be loaded. For example:
-					 * 'myplugin' => 'http://mysite.com/wp-content/plugins/myfolder/mce_plugin.js'.
+					 * 'myplugin' => '//mysite.com/wp-content/plugins/myfolder/mce_plugin.js'.
 					 *
 					 * If the external plugin adds a button, it should be added with
 					 * one of the 'mce_buttons' filters.
@@ -1261,8 +1261,8 @@ final class _WP_Editors {
 				'Url'                                  => __( 'URL' ),
 				'The URL you entered seems to be an email address. Do you want to add the required mailto: prefix?' =>
 					__( 'The URL you entered seems to be an email address. Do you want to add the required mailto: prefix?' ),
-				'The URL you entered seems to be an external link. Do you want to add the required http:// prefix?' =>
-					__( 'The URL you entered seems to be an external link. Do you want to add the required http:// prefix?' ),
+				'The URL you entered seems to be an external link. Do you want to add the required // prefix?' =>
+					__( 'The URL you entered seems to be an external link. Do you want to add the required // prefix?' ),
 
 				'Color'                                => __( 'Color' ),
 				'Custom color'                         => __( 'Custom color' ),

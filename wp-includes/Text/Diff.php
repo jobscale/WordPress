@@ -7,10 +7,10 @@
  * <dairiki@dairiki.org>, and is used/adapted with his permission.
  *
  * Copyright 2004 Geoffrey T. Dairiki <dairiki@dairiki.org>
- * Copyright 2004-2010 The Horde Project (http://www.horde.org/)
+ * Copyright 2004-2010 The Horde Project (//www.horde.org/)
  *
  * See the enclosed file COPYING for license information (LGPL). If you did
- * not receive this file, see http://opensource.org/licenses/lgpl-license.php.
+ * not receive this file, see //opensource.org/licenses/lgpl-license.php.
  *
  * @package Text_Diff
  * @author  Geoffrey T. Dairiki <dairiki@dairiki.org>

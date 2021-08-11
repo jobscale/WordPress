@@ -19,7 +19,7 @@ To use it, place the `font` folder in your stylesheet directory and enqueue the 
 }
 ```
 
-This will output a comment icon before every element with the class "my-icon". The `content: '\f101';` part of this CSS is easily copied from the helper tool at http://genericons.com/, or `example.html` in the `font` directory.
+This will output a comment icon before every element with the class "my-icon". The `content: '\f101';` part of this CSS is easily copied from the helper tool at //genericons.com/, or `example.html` in the `font` directory.
 
 You can also use the bundled example.css if you'd rather insert the icons using HTML tags.
 

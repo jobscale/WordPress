@@ -7,7 +7,7 @@
  *
  * https://github.com/bgrins/TinyColor
  *
- * Copyright (c), Brian Grinstead, http://briangrinstead.com
+ * Copyright (c), Brian Grinstead, //briangrinstead.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -379,7 +379,7 @@ function wp_render_duotone_support( $block_content, $block ) {
 	</style>
 
 	<svg
-		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:xlink="//www.w3.org/1999/xlink"
 		viewBox="0 0 0 0"
 		width="0"
 		height="0"

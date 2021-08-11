@@ -3,7 +3,7 @@
  * Atom Syndication Format PHP Library
  *
  * @package AtomLib
- * @link http://code.google.com/p/phpatomlib/
+ * @link //code.google.com/p/phpatomlib/
  *
  * @author Elias Torres <elias@torrez.us>
  * @version 0.4
@@ -64,7 +64,7 @@ class AtomEntry {
  */
 class AtomParser {
 
-    var $NS = 'http://www.w3.org/2005/Atom';
+    var $NS = '//www.w3.org/2005/Atom';
     var $ATOM_CONTENT_ELEMENTS = array('content','summary','title','subtitle','rights');
     var $ATOM_SIMPLE_ELEMENTS = array('id','updated','published','draft');
 
@@ -346,7 +346,7 @@ class AtomParser {
 
 
     function ns_to_prefix($qname, $attr=false) {
-        # split 'http://www.w3.org/1999/xhtml:div' into ('http','//www.w3.org/1999/xhtml','div')
+        # split '//www.w3.org/1999/xhtml:div' into ('http','//www.w3.org/1999/xhtml','div')
         $components = explode(":", $qname);
 
         # grab the last one (e.g 'div')

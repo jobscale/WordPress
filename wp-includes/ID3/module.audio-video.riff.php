@@ -4,7 +4,7 @@
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at https://github.com/JamesHeinrich/getID3       //
 //            or https://www.getid3.org                        //
-//            or http://getid3.sourceforge.net                 //
+//            or //getid3.sourceforge.net                 //
 //  see readme.txt for more details                            //
 /////////////////////////////////////////////////////////////////
 //                                                             //
@@ -179,7 +179,7 @@ class getid3_riff extends getid3_handler
 		$streamindex = 0;
 		switch ($RIFFsubtype) {
 
-			// http://en.wikipedia.org/wiki/Wav
+			// //en.wikipedia.org/wiki/Wav
 			case 'WAVE':
 				$info['fileformat'] = 'wav';
 
@@ -614,7 +614,7 @@ class getid3_riff extends getid3_handler
 				}
 				break;
 
-			// http://en.wikipedia.org/wiki/Audio_Video_Interleave
+			// //en.wikipedia.org/wiki/Audio_Video_Interleave
 			case 'AVI ':
 				$info['fileformat'] = 'avi';
 				$info['mime_type']  = 'video/avi';
@@ -923,7 +923,7 @@ class getid3_riff extends getid3_handler
 				break;
 
 
-			// http://en.wikipedia.org/wiki/CD-DA
+			// //en.wikipedia.org/wiki/CD-DA
 			case 'CDDA':
 				$info['fileformat'] = 'cda';
 				unset($info['mime_type']);
@@ -959,7 +959,7 @@ class getid3_riff extends getid3_handler
 				}
 				break;
 
-			// http://en.wikipedia.org/wiki/AIFF
+			// //en.wikipedia.org/wiki/AIFF
 			case 'AIFF':
 			case 'AIFC':
 				$info['fileformat'] = 'aiff';
@@ -1005,7 +1005,7 @@ class getid3_riff extends getid3_handler
 
 							case '':
 								switch ($thisfile_riff_audio['codec_fourcc']) {
-									// http://developer.apple.com/qa/snd/snd07.html
+									// //developer.apple.com/qa/snd/snd07.html
 									case 'sowt':
 										$thisfile_riff_audio['codec_name'] = 'Two\'s Compliment Little-Endian PCM';
 										$thisfile_audio['lossless'] = true;
@@ -1080,7 +1080,7 @@ class getid3_riff extends getid3_handler
 */
 				break;
 
-			// http://en.wikipedia.org/wiki/8SVX
+			// //en.wikipedia.org/wiki/8SVX
 			case '8SVX':
 				$info['fileformat'] = '8svx';
 				$info['mime_type']  = 'audio/8svx';
@@ -2100,8 +2100,8 @@ class getid3_riff extends getid3_handler
 	 * @return array
 	 */
 	public static function ParseDIVXTAG($DIVXTAG, $raw=false) {
-		// structure from "IDivX" source, Form1.frm, by "Greg Frazier of Daemonic Software Group", email: gfrazier@icestorm.net, web: http://dsg.cjb.net/
-		// source available at http://files.divx-digest.com/download/c663efe7ef8ad2e90bf4af4d3ea6188a/on0SWN2r/edit/IDivX.zip
+		// structure from "IDivX" source, Form1.frm, by "Greg Frazier of Daemonic Software Group", email: gfrazier@icestorm.net, web: //dsg.cjb.net/
+		// source available at //files.divx-digest.com/download/c663efe7ef8ad2e90bf4af4d3ea6188a/on0SWN2r/edit/IDivX.zip
 		// 'Byte Layout:                   '1111111111111111
 		// '32 for Movie - 1               '1111111111111111
 		// '28 for Author - 6              '6666666666666666
@@ -2387,7 +2387,7 @@ class getid3_riff extends getid3_handler
 
 		/** This is not a comment!
 
-			swot	http://developer.apple.com/qa/snd/snd07.html
+			swot	//developer.apple.com/qa/snd/snd07.html
 			____	No Codec (____)
 			_BIT	BI_BITFIELDS (Raw RGB)
 			_JPG	JPEG compressed
@@ -2638,7 +2638,7 @@ class getid3_riff extends getid3_handler
 			RMP4	REALmagic MPEG-4 (unauthorized XVID copy) (www.sigmadesigns.com)
 			ROQV	Id RoQ File Video Decoder
 			RPZA	Quicktime Apple Video (RPZA)
-			RUD0	Rududu video codec (http://rududu.ifrance.com/rududu/)
+			RUD0	Rududu video codec (//rududu.ifrance.com/rududu/)
 			RV10	RealVideo 1.0 (aka RealVideo 5.0)
 			RV13	RealVideo 1.0 (RV13)
 			RV20	RealVideo G2
@@ -2700,7 +2700,7 @@ class getid3_riff extends getid3_handler
 			VIFP	VFAPI Reader Codec (www.yks.ne.jp/~hori/)
 			VIV1	FFmpeg H263+ decoder
 			VIV2	Vivo H.263
-			VQC2	Vector-quantised codec 2 (research) http://eprints.ecs.soton.ac.uk/archive/00001310/01/VTC97-js.pdf)
+			VQC2	Vector-quantised codec 2 (research) //eprints.ecs.soton.ac.uk/archive/00001310/01/VTC97-js.pdf)
 			VTLP	Alaris VideoGramPiX
 			VYU9	ATI YUV (VYU9)
 			VYUY	ATI YUV (VYUY)

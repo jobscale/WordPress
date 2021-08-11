@@ -404,7 +404,7 @@ if ( defined( 'RELOCATE' ) && RELOCATE ) { // Move flag is set.
 		$_SERVER['PHP_SELF'] = str_replace( $_SERVER['PATH_INFO'], '', $_SERVER['PHP_SELF'] );
 	}
 
-	$url = dirname( set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] ) );
+	$url = dirname( set_url_scheme( '//' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] ) );
 
 	if ( get_option( 'siteurl' ) !== $url ) {
 		update_option( 'siteurl', $url );
@@ -1131,7 +1131,7 @@ switch ( $action ) {
 			$redirect_to = $_REQUEST['redirect_to'];
 			// Redirect to HTTPS if user wants SSL.
 			if ( $secure_cookie && false !== strpos( $redirect_to, 'wp-admin' ) ) {
-				$redirect_to = preg_replace( '|^http://|', 'https://', $redirect_to );
+				$redirect_to = preg_replace( '|^//|', 'https://', $redirect_to );
 			}
 		} else {
 			$redirect_to = admin_url();

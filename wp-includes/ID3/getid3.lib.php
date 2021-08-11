@@ -4,7 +4,7 @@
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at https://github.com/JamesHeinrich/getID3       //
 //            or https://www.getid3.org                        //
-//            or http://getid3.sourceforge.net                 //
+//            or //getid3.sourceforge.net                 //
 //                                                             //
 // getid3.lib.php - part of getID3()                           //
 //  see readme.txt for more details                            //
@@ -142,7 +142,7 @@ class getid3_lib
 	}
 
 	/**
-	 * @link http://www.scri.fsu.edu/~jac/MAD3401/Backgrnd/binary.html
+	 * @link //www.scri.fsu.edu/~jac/MAD3401/Backgrnd/binary.html
 	 *
 	 * @param string $binarypointnumber
 	 * @param int    $maxbits
@@ -172,7 +172,7 @@ class getid3_lib
 	}
 
 	/**
-	 * @link http://www.scri.fsu.edu/~jac/MAD3401/Backgrnd/binary.html
+	 * @link //www.scri.fsu.edu/~jac/MAD3401/Backgrnd/binary.html
 	 *
 	 * @param float $floatvalue
 	 *
@@ -193,7 +193,7 @@ class getid3_lib
 	}
 
 	/**
-	 * @link http://www.scri.fsu.edu/~jac/MAD3401/Backgrnd/ieee-expl.html
+	 * @link //www.scri.fsu.edu/~jac/MAD3401/Backgrnd/ieee-expl.html
 	 *
 	 * @param float $floatvalue
 	 * @param int $bits
@@ -242,8 +242,8 @@ class getid3_lib
 	/**
 	 * ANSI/IEEE Standard 754-1985, Standard for Binary Floating Point Arithmetic
 	 *
-	 * @link http://www.psc.edu/general/software/packages/ieee/ieee.html
-	 * @link http://www.scri.fsu.edu/~jac/MAD3401/Backgrnd/ieee.html
+	 * @link //www.psc.edu/general/software/packages/ieee/ieee.html
+	 * @link //www.scri.fsu.edu/~jac/MAD3401/Backgrnd/ieee.html
 	 *
 	 * @param string $byteword
 	 *
@@ -272,7 +272,7 @@ class getid3_lib
 
 			case 80:
 				// 80-bit Apple SANE format
-				// http://www.mactech.com/articles/mactech/Vol.06/06.01/SANENormalized/
+				// //www.mactech.com/articles/mactech/Vol.06/06.01/SANENormalized/
 				$exponentstring = substr($bitword, 1, 15);
 				$isnormalized = intval($bitword[16]);
 				$fractionstring = substr($bitword, 17, 63);
@@ -504,7 +504,7 @@ class getid3_lib
 	 */
 	public static function array_merge_clobber($array1, $array2) {
 		// written by kcØhireability*com
-		// taken from http://www.php.net/manual/en/function.array-merge-recursive.php
+		// taken from //www.php.net/manual/en/function.array-merge-recursive.php
 		if (!is_array($array1) || !is_array($array2)) {
 			return false;
 		}
@@ -720,7 +720,7 @@ class getid3_lib
 	 */
 	public static function XML2array($XMLstring) {
 		if (function_exists('simplexml_load_string') && function_exists('libxml_disable_entity_loader')) {
-			// http://websec.io/2012/08/27/Preventing-XEE-in-PHP.html
+			// //websec.io/2012/08/27/Preventing-XEE-in-PHP.html
 			// https://core.trac.wordpress.org/changeset/29378
 			// This function has been deprecated in PHP 8.0 because in libxml 2.9.0, external entity loading is
 			// disabled by default, but is still needed when LIBXML_NOENT is used.

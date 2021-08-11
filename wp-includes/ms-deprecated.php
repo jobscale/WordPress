@@ -242,7 +242,7 @@ function get_most_active_blogs( $num = 10, $display = true ) {
 		if ( is_array( $most_active ) ) {
 			reset( $most_active );
 			foreach ( (array) $most_active as $key => $details ) {
-				$url = esc_url('http://' . $details['domain'] . $details['path']);
+				$url = esc_url('//' . $details['domain'] . $details['path']);
 				echo '<li>' . $details['postcount'] . " <a href='$url'>$url</a></li>";
 			}
 		}
@@ -366,16 +366,16 @@ function get_blogaddress_by_domain( $domain, $path ) {
 	_deprecated_function( __FUNCTION__, '3.7.0' );
 
 	if ( is_subdomain_install() ) {
-		$url = "http://" . $domain.$path;
+		$url = "//" . $domain.$path;
 	} else {
 		if ( $domain != $_SERVER['HTTP_HOST'] ) {
 			$blogname = substr( $domain, 0, strpos( $domain, '.' ) );
-			$url = 'http://' . substr( $domain, strpos( $domain, '.' ) + 1 ) . $path;
+			$url = '//' . substr( $domain, strpos( $domain, '.' ) + 1 ) . $path;
 			// We're not installing the main blog.
 			if ( 'www.' !== $blogname )
 				$url .= $blogname . '/';
 		} else { // Main blog.
-			$url = 'http://' . $domain . $path;
+			$url = '//' . $domain . $path;
 		}
 	}
 	return esc_url_raw( $url );

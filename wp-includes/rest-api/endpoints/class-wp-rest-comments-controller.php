@@ -1376,7 +1376,7 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 		}
 
 		$schema = array(
-			'$schema'    => 'http://json-schema.org/draft-04/schema#',
+			'$schema'    => '//json-schema.org/draft-04/schema#',
 			'title'      => 'comment',
 			'type'       => 'object',
 			'properties' => array(

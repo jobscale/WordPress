@@ -776,7 +776,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 		}
 
 		$this->schema = array(
-			'$schema'    => 'http://json-schema.org/draft-04/schema#',
+			'$schema'    => '//json-schema.org/draft-04/schema#',
 			'title'      => 'application-password',
 			'type'       => 'object',
 			'properties' => array(

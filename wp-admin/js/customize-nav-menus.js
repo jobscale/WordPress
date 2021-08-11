@@ -555,7 +555,7 @@
 
 			/*
 			 * Allow URLs including:
-			 * - http://example.com/
+			 * - //example.com/
 			 * - //example.com
 			 * - /directory/
 			 * - ?query-param

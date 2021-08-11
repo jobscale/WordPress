@@ -198,7 +198,7 @@ abstract class WP_Widget_Media extends WP_Widget {
 	 *
 	 * @since 4.8.0
 	 *
-	 * @link http://w3c.github.io/html/infrastructure.html#space-separated-tokens
+	 * @link //w3c.github.io/html/infrastructure.html#space-separated-tokens
 	 * @link https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList
 	 * @param string|array $tokens List of tokens separated by spaces, or an array of tokens.
 	 * @return string Sanitized token string list.

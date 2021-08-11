@@ -128,7 +128,7 @@
 	 * @param	{function}		onSuccess	ajax success callback function
 	 */
 	$.fn.ajaxSubmit = function(options, data, dataType, onSuccess) {
-		// fast fail if nothing selected (http://dev.jquery.com/ticket/2752)
+		// fast fail if nothing selected (//dev.jquery.com/ticket/2752)
 		if (!this.length) {
 			log('ajaxSubmit: skipping submit process - no element selected');
 
@@ -324,7 +324,7 @@
 		// 06-NOV-09: now defaulting to iframe mode if file input is detected
 		if (options.iframe !== false && (options.iframe || shouldUseFrame)) {
 			// hack to fix Safari hang (thanks to Tim Molendijk for this)
-			// see: http://groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
+			// see: //groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
 			if (options.closeKeepAlive) {
 				$.get(options.closeKeepAlive, function() {
 					jqxhr = fileUploadIframe(a);
@@ -568,7 +568,7 @@
 				 * carry the protocol property in ie8, when running under ssl
 				 * frame.document is the only valid response document, since
 				 * the protocol is know but not on the other two objects. strange?
-				 * "Same origin policy" http://en.wikipedia.org/wiki/Same_origin_policy
+				 * "Same origin policy" //en.wikipedia.org/wiki/Same_origin_policy
 				 */
 
 				var doc = null;
@@ -1000,7 +1000,7 @@
 				return this;
 			}
 
-			// is your DOM ready?  http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+			// is your DOM ready?  //docs.jquery.com/Tutorials:Introducing_$(document).ready()
 			log('terminating; zero elements found by selector' + ($.isReady ? '' : ' (DOM not ready)'));
 
 			return this;
@@ -1263,7 +1263,7 @@
 	 *	v === ['C1']
 	 *
 	 * The successful argument controls whether or not the field element must be 'successful'
-	 * (per http://www.w3.org/TR/html4/interact/forms.html#successful-controls).
+	 * (per //www.w3.org/TR/html4/interact/forms.html#successful-controls).
 	 * The default value of the successful argument is true. If this value is false the value(s)
 	 * for each element is returned.
 	 *

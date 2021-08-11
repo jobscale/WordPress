@@ -31,7 +31,7 @@ You may contact the author of Snoopy by e-mail at:
 monte@ohrt.com
 
 The latest version of Snoopy can be obtained from:
-http://snoopy.sourceforge.net/
+//snoopy.sourceforge.net/
 
 *************************************************/
 
@@ -93,7 +93,7 @@ class Snoopy
 												// SSL content if a full system path to
 												// the cURL binary is supplied here.
 												// set to false if you do not have
-												// cURL installed. See http://curl.haxx.se
+												// cURL installed. See //curl.haxx.se
 												// for details on installing cURL.
 												// Snoopy does *not* use the cURL
 												// library functions built into php,
@@ -168,7 +168,7 @@ class Snoopy
 						if($this->maxredirs > $this->_redirectdepth)
 						{
 							// only follow redirect if it's on this site, or offsiteok is true
-							if(preg_match("|^http://".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
+							if(preg_match("|^//".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
 							{
 								/* follow the redirect */
 								$this->_redirectdepth++;
@@ -228,7 +228,7 @@ class Snoopy
 					if($this->maxredirs > $this->_redirectdepth)
 					{
 						// only follow redirect if it's on this site, or offsiteok is true
-						if(preg_match("|^http://".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
+						if(preg_match("|^//".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
 						{
 							/* follow the redirect */
 							$this->_redirectdepth++;
@@ -323,7 +323,7 @@ class Snoopy
 								$this->_redirectaddr = $this->_expandlinks($this->_redirectaddr,$URI_PARTS["scheme"]."://".$URI_PARTS["host"]);
 
 							// only follow redirect if it's on this site, or offsiteok is true
-							if(preg_match("|^http://".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
+							if(preg_match("|^//".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
 							{
 								/* follow the redirect */
 								$this->_redirectdepth++;
@@ -390,7 +390,7 @@ class Snoopy
 							$this->_redirectaddr = $this->_expandlinks($this->_redirectaddr,$URI_PARTS["scheme"]."://".$URI_PARTS["host"]);
 
 						// only follow redirect if it's on this site, or offsiteok is true
-						if(preg_match("|^http://".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
+						if(preg_match("|^//".preg_quote($this->host)."|i",$this->_redirectaddr) || $this->offsiteok)
 						{
 							/* follow the redirect */
 							$this->_redirectdepth++;
@@ -752,9 +752,9 @@ class Snoopy
 		$match_root =
 		$match_part["scheme"]."://".$match_part["host"];
 
-		$search = array( 	"|^http://".preg_quote($this->host)."|i",
+		$search = array( 	"|^//".preg_quote($this->host)."|i",
 							"|^(\/)|i",
-							"|^(?!http://)(?!mailto:)|i",
+							"|^(?!//)(?!mailto:)|i",
 							"|/\./|",
 							"|/[^\/]+/\.\./|"
 						);

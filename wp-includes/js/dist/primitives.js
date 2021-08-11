@@ -248,7 +248,7 @@ const View = 'div';
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
   Copyright (c) 2018 Jed Watson.
   Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
+  //jedwatson.github.io/classnames
 */
 /* global define */
 

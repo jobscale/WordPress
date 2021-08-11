@@ -5,7 +5,7 @@
  * Used internally by the WP_Embed class, but is designed to be generic.
  *
  * @link https://wordpress.org/support/article/embeds/
- * @link http://oembed.com/
+ * @link //oembed.com/
  *
  * @package WordPress
  * @subpackage oEmbed

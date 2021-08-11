@@ -42,7 +42,7 @@ From then on, you can create an icon like this:
 	vertical-align: top;
 }
 
-This will output a comment icon before every element with the class "my-icon". The "content: '\f101';" part of this CSS is easily copied from the helper tool at http://genericons.com/
+This will output a comment icon before every element with the class "my-icon". The "content: '\f101';" part of this CSS is easily copied from the helper tool at //genericons.com/
 
 You can also use the bundled example.css if you'd rather insert the icons using HTML tags.
 
@@ -62,7 +62,7 @@ Pixel grid:
 
 Note that Genericons has been designed for a 16x16 pixel grid. That means it'll look sharp at font-size: 16px exactly. It'll also be crisp at multiples thereof, such as 32px or 64px. It'll also look reasonably crisp at in-between font sizes such as 24px or 48px, but not quite as crisp as 16 or 32. Please don't set the font-size to 17px, though, that'll just look terrible.
 
-Also note the CSS property "-webkit-font-smoothing: antialiased". That makes the icons look great in WebKit browsers. Please see http://noscope.com/2012/font-smoothing for more info.
+Also note the CSS property "-webkit-font-smoothing: antialiased". That makes the icons look great in WebKit browsers. Please see //noscope.com/2012/font-smoothing for more info.
 
 Updates:
 

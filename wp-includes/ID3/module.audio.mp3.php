@@ -4,7 +4,7 @@
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at https://github.com/JamesHeinrich/getID3       //
 //            or https://www.getid3.org                        //
-//            or http://getid3.sourceforge.net                 //
+//            or //getid3.sourceforge.net                 //
 //  see readme.txt for more details                            //
 /////////////////////////////////////////////////////////////////
 //                                                             //
@@ -270,7 +270,7 @@ class getid3_mp3 extends getid3_handler
 
 			} elseif ($info['audio']['bitrate_mode'] == 'vbr') {
 
-				// http://gabriel.mp3-tech.org/mp3infotag.html
+				// //gabriel.mp3-tech.org/mp3infotag.html
 				// int    Quality = (100 - 10 * gfp->VBR_q - gfp->quality)h
 
 
@@ -515,7 +515,7 @@ class getid3_mp3 extends getid3_handler
 		}
 
 		if ($thisfile_mpeg_audio['raw']['bitrate'] == 15) {
-			// http://www.hydrogenaudio.org/?act=ST&f=16&t=9682&st=0
+			// //www.hydrogenaudio.org/?act=ST&f=16&t=9682&st=0
 			$this->warning('Invalid bitrate index (15), this is a known bug in free-format MP3s encoded by LAME v3.90 - 3.93.1');
 			$thisfile_mpeg_audio['raw']['bitrate'] = 0;
 		}
@@ -584,7 +584,7 @@ class getid3_mp3 extends getid3_handler
 
 		if (substr($headerstring, 4 + 32, 4) == 'VBRI') {
 			// Fraunhofer VBR header is hardcoded 'VBRI' at offset 0x24 (36)
-			// specs taken from http://minnie.tuhs.org/pipermail/mp3encoder/2001-January/001800.html
+			// specs taken from //minnie.tuhs.org/pipermail/mp3encoder/2001-January/001800.html
 
 			$thisfile_mpeg_audio['bitrate_mode'] = 'vbr';
 			$thisfile_mpeg_audio['VBR_method']   = 'Fraunhofer';
@@ -629,7 +629,7 @@ class getid3_mp3 extends getid3_handler
 				// 'Info' is LAME-encoded CBR (This was done to avoid CBR files to be recognized as traditional Xing VBR files by some decoders.)
 				// 'Info' *can* legally be used to specify a VBR file as well, however.
 
-				// http://www.multiweb.cz/twoinches/MP3inside.htm
+				// //www.multiweb.cz/twoinches/MP3inside.htm
 				//00..03 = "Xing" or "Info"
 				//04..07 = Flags:
 				//  0x01  Frames Flag     set if value for number of frames in file is stored
@@ -712,7 +712,7 @@ class getid3_mp3 extends getid3_handler
 				}
 
 
-				// http://gabriel.mp3-tech.org/mp3infotag.html
+				// //gabriel.mp3-tech.org/mp3infotag.html
 				if (substr($headerstring, $VBRidOffset + 120, 4) == 'LAME') {
 
 					// shortcut
@@ -738,9 +738,9 @@ class getid3_mp3 extends getid3_handler
 						unset($thisfile_mpeg_audio_lame['long_version']);
 
 						// It the LAME tag was only introduced in LAME v3.90
-						// http://www.hydrogenaudio.org/?act=ST&f=15&t=9933
+						// //www.hydrogenaudio.org/?act=ST&f=15&t=9933
 
-						// Offsets of various bytes in http://gabriel.mp3-tech.org/mp3infotag.html
+						// Offsets of various bytes in //gabriel.mp3-tech.org/mp3infotag.html
 						// are assuming a 'Xing' identifier offset of 0x24, which is the case for
 						// MPEG-1 non-mono, but not for other combinations
 						$LAMEtagOffsetContant = $VBRidOffset - 0x24;
@@ -774,7 +774,7 @@ class getid3_mp3 extends getid3_handler
 						$thisfile_mpeg_audio_lame['lowpass_frequency'] = getid3_lib::BigEndian2Int(substr($headerstring, $LAMEtagOffsetContant + 0xA6, 1)) * 100;
 
 						// bytes $A7-$AE  Replay Gain
-						// http://privatewww.essex.ac.uk/~djmrob/replaygain/rg_data_format.html
+						// //privatewww.essex.ac.uk/~djmrob/replaygain/rg_data_format.html
 						// bytes $A7-$AA : 32 bit floating point "Peak signal amplitude"
 						if ($thisfile_mpeg_audio_lame['short_version'] >= 'LAME3.94b') {
 							// LAME 3.94a16 and later - 9.23 fixed point

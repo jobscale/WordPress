@@ -4,7 +4,7 @@
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at https://github.com/JamesHeinrich/getID3       //
 //            or https://www.getid3.org                        //
-//            or http://getid3.sourceforge.net                 //
+//            or //getid3.sourceforge.net                 //
 //  see readme.txt for more details                            //
 /////////////////////////////////////////////////////////////////
 //                                                             //
@@ -19,7 +19,7 @@ if (!defined('GETID3_INCLUDEPATH')) { // prevent path-exposing attacks that acce
 }
 
 /**
-* @tutorial http://wiki.multimedia.cx/index.php?title=DTS
+* @tutorial //wiki.multimedia.cx/index.php?title=DTS
 */
 class getid3_dts extends getid3_handler
 {

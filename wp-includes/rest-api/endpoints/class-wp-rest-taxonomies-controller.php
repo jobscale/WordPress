@@ -303,7 +303,7 @@ class WP_REST_Taxonomies_Controller extends WP_REST_Controller {
 		}
 
 		$schema = array(
-			'$schema'    => 'http://json-schema.org/draft-04/schema#',
+			'$schema'    => '//json-schema.org/draft-04/schema#',
 			'title'      => 'taxonomy',
 			'type'       => 'object',
 			'properties' => array(

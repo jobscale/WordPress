@@ -418,9 +418,9 @@ function get_allowed_http_origins() {
 	// @todo Preserve port?
 	$allowed_origins = array_unique(
 		array(
-			'http://' . $admin_origin['host'],
+			'//' . $admin_origin['host'],
 			'https://' . $admin_origin['host'],
-			'http://' . $home_origin['host'],
+			'//' . $home_origin['host'],
 			'https://' . $home_origin['host'],
 		)
 	);
@@ -604,7 +604,7 @@ function wp_http_validate_url( $url ) {
  * @return bool
  */
 function allowed_http_request_hosts( $is_external, $host ) {
-	if ( ! $is_external && wp_validate_redirect( 'http://' . $host ) ) {
+	if ( ! $is_external && wp_validate_redirect( '//' . $host ) ) {
 		$is_external = true;
 	}
 	return $is_external;

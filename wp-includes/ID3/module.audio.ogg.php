@@ -4,7 +4,7 @@
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at https://github.com/JamesHeinrich/getID3       //
 //            or https://www.getid3.org                        //
-//            or http://getid3.sourceforge.net                 //
+//            or //getid3.sourceforge.net                 //
 //  see readme.txt for more details                            //
 /////////////////////////////////////////////////////////////////
 //                                                             //
@@ -22,7 +22,7 @@ getid3_lib::IncludeDependency(GETID3_INCLUDEPATH.'module.audio.flac.php', __FILE
 class getid3_ogg extends getid3_handler
 {
 	/**
-	 * @link http://xiph.org/vorbis/doc/Vorbis_I_spec.html
+	 * @link //xiph.org/vorbis/doc/Vorbis_I_spec.html
 	 *
 	 * @return bool
 	 */
@@ -78,7 +78,7 @@ class getid3_ogg extends getid3_handler
 
 		} elseif (substr($filedata, 0, 8) == 'Speex   ') {
 
-			// http://www.speex.org/manual/node10.html
+			// //www.speex.org/manual/node10.html
 
 			$info['audio']['dataformat']   = 'speex';
 			$info['mime_type']             = 'audio/speex';
@@ -130,7 +130,7 @@ class getid3_ogg extends getid3_handler
 
 		} elseif (substr($filedata, 0, 7) == "\x80".'theora') {
 
-			// http://www.theora.org/doc/Theora.pdf (section 6.2)
+			// //www.theora.org/doc/Theora.pdf (section 6.2)
 
 			$info['ogg']['pageheader']['theora']['theora_magic']             =                           substr($filedata, $filedataoffset,  7); // hard-coded to "\x80.'theora'
 			$filedataoffset += 7;
@@ -192,7 +192,7 @@ class getid3_ogg extends getid3_handler
 		} elseif (substr($filedata, 0, 8) == "fishead\x00") {
 
 			// Ogg Skeleton version 3.0 Format Specification
-			// http://xiph.org/ogg/doc/skeleton.html
+			// //xiph.org/ogg/doc/skeleton.html
 			$filedataoffset += 8;
 			$info['ogg']['skeleton']['fishead']['raw']['version_major']                = getid3_lib::LittleEndian2Int(substr($filedata, $filedataoffset,  2));
 			$filedataoffset += 2;
@@ -466,7 +466,7 @@ class getid3_ogg extends getid3_handler
 	}
 
 	/**
-	 * @link http://tools.ietf.org/html/draft-ietf-codec-oggopus-03
+	 * @link //tools.ietf.org/html/draft-ietf-codec-oggopus-03
 	 *
 	 * @param string $filedata
 	 * @param int    $filedataoffset
@@ -528,7 +528,7 @@ class getid3_ogg extends getid3_handler
 	 * @return array|false
 	 */
 	public function ParseOggPageHeader() {
-		// http://xiph.org/ogg/vorbis/doc/framing.html
+		// //xiph.org/ogg/vorbis/doc/framing.html
 		$oggheader['page_start_offset'] = $this->ftell(); // where we started from in the file
 
 		$filedata = $this->fread($this->getid3->fread_buffer_size());
@@ -579,7 +579,7 @@ class getid3_ogg extends getid3_handler
 	}
 
 	/**
-	 * @link http://xiph.org/vorbis/doc/Vorbis_I_spec.html#x1-810005
+	 * @link //xiph.org/vorbis/doc/Vorbis_I_spec.html#x1-810005
 	 *
 	 * @return bool
 	 */
@@ -727,9 +727,9 @@ class getid3_ogg extends getid3_handler
 
 				if ($ThisFileInfo_ogg_comments_raw[$i]['key'] == 'METADATA_BLOCK_PICTURE') {
 
-					// http://wiki.xiph.org/VorbisComment#METADATA_BLOCK_PICTURE
+					// //wiki.xiph.org/VorbisComment#METADATA_BLOCK_PICTURE
 					// The unencoded format is that of the FLAC picture block. The fields are stored in big endian order as in FLAC, picture data is stored according to the relevant standard.
-					// http://flac.sourceforge.net/format.html#metadata_block_picture
+					// //flac.sourceforge.net/format.html#metadata_block_picture
 					$flac = new getid3_flac($this->getid3);
 					$flac->setStringMode(base64_decode($ThisFileInfo_ogg_comments_raw[$i]['value']));
 					$flac->parsePICTURE();
@@ -776,7 +776,7 @@ class getid3_ogg extends getid3_handler
 
 
 		// Replay Gain Adjustment
-		// http://privatewww.essex.ac.uk/~djmrob/replaygain/
+		// //privatewww.essex.ac.uk/~djmrob/replaygain/
 		if (isset($info['ogg']['comments']) && is_array($info['ogg']['comments'])) {
 			foreach ($info['ogg']['comments'] as $index => $commentvalue) {
 				switch ($index) {
@@ -889,7 +889,7 @@ class getid3_ogg extends getid3_handler
 	 * @return string|null
 	 */
 	public static function TheoraColorSpace($colorspace_id) {
-		// http://www.theora.org/doc/Theora.pdf (table 6.3)
+		// //www.theora.org/doc/Theora.pdf (table 6.3)
 		static $TheoraColorSpaceLookup = array();
 		if (empty($TheoraColorSpaceLookup)) {
 			$TheoraColorSpaceLookup[0] = 'Undefined';
@@ -906,7 +906,7 @@ class getid3_ogg extends getid3_handler
 	 * @return string|null
 	 */
 	public static function TheoraPixelFormat($pixelformat_id) {
-		// http://www.theora.org/doc/Theora.pdf (table 6.4)
+		// //www.theora.org/doc/Theora.pdf (table 6.4)
 		static $TheoraPixelFormatLookup = array();
 		if (empty($TheoraPixelFormatLookup)) {
 			$TheoraPixelFormatLookup[0] = '4:2:0';

@@ -137,7 +137,7 @@ class wp_xmlrpc_server extends IXR_Server {
 			'metaWeblog.newMediaObject'        => 'this:mw_newMediaObject',
 
 			// MetaWeblog API aliases for Blogger API.
-			// See http://www.xmlrpc.com/stories/storyReader$2460
+			// See //www.xmlrpc.com/stories/storyReader$2460
 			'metaWeblog.deletePost'            => 'this:blogger_deletePost',
 			'metaWeblog.getUsersBlogs'         => 'this:blogger_getUsersBlogs',
 
@@ -4776,7 +4776,7 @@ class wp_xmlrpc_server extends IXR_Server {
 
 	/*
 	 * Blogger API functions.
-	 * Specs on http://plant.blogger.com/api and https://groups.yahoo.com/group/bloggerDev/
+	 * Specs on //plant.blogger.com/api and https://groups.yahoo.com/group/bloggerDev/
 	 */
 
 	/**
@@ -4849,7 +4849,7 @@ class wp_xmlrpc_server extends IXR_Server {
 		$domain = $current_blog->domain;
 		$path   = $current_blog->path . 'xmlrpc.php';
 
-		$rpc = new IXR_Client( set_url_scheme( "http://{$domain}{$path}" ) );
+		$rpc = new IXR_Client( set_url_scheme( "//{$domain}{$path}" ) );
 		$rpc->query( 'wp.getUsersBlogs', $args[1], $args[2] );
 		$blogs = $rpc->getResponse();
 
@@ -6344,7 +6344,7 @@ class wp_xmlrpc_server extends IXR_Server {
 	 *
 	 * Adapted from a patch by Johann Richard.
 	 *
-	 * @link http://mycvs.org/archives/2004/06/30/file-upload-to-wordpress-in-ecto/
+	 * @link //mycvs.org/archives/2004/06/30/file-upload-to-wordpress-in-ecto/
 	 *
 	 * @since 1.5.0
 	 *
@@ -6461,7 +6461,7 @@ class wp_xmlrpc_server extends IXR_Server {
 
 	/*
 	 * MovableType API functions.
-	 * Specs on http://www.movabletype.org/docs/mtmanual_programmatic.html
+	 * Specs on //www.movabletype.org/docs/mtmanual_programmatic.html
 	 */
 
 	/**
@@ -6852,7 +6852,7 @@ class wp_xmlrpc_server extends IXR_Server {
 		}
 
 		// Check if the page linked to is on our site.
-		$pos1 = strpos( $pagelinkedto, str_replace( array( 'http://www.', 'http://', 'https://www.', 'https://' ), '', get_option( 'home' ) ) );
+		$pos1 = strpos( $pagelinkedto, str_replace( array( '//www.', '//', 'https://www.', 'https://' ), '', get_option( 'home' ) ) );
 		if ( ! $pos1 ) {
 			return $this->pingback_error( 0, __( 'Is there no link to us?' ) );
 		}
@@ -7055,7 +7055,7 @@ class wp_xmlrpc_server extends IXR_Server {
 	/**
 	 * Retrieve array of URLs that pingbacked the given URL.
 	 *
-	 * Specs on http://www.aquarionics.com/misc/archives/blogite/0198.html
+	 * Specs on //www.aquarionics.com/misc/archives/blogite/0198.html
 	 *
 	 * @since 1.5.0
 	 *

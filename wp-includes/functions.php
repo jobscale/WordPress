@@ -1061,14 +1061,14 @@ function _http_build_query( $data, $prefix = null, $sep = null, $key = '', $urle
  *
  * Using a single key and value:
  *
- *     add_query_arg( 'key', 'value', 'http://example.com' );
+ *     add_query_arg( 'key', 'value', '//example.com' );
  *
  * Using an associative array:
  *
  *     add_query_arg( array(
  *         'key1' => 'value1',
  *         'key2' => 'value2',
- *     ), 'http://example.com' );
+ *     ), '//example.com' );
  *
  * Omitting the URL from either use results in the current URL being used
  * (the value of `$_SERVER['REQUEST_URI']`).
@@ -1112,8 +1112,8 @@ function add_query_arg( ...$args ) {
 		$frag = '';
 	}
 
-	if ( 0 === stripos( $uri, 'http://' ) ) {
-		$protocol = 'http://';
+	if ( 0 === stripos( $uri, '//' ) ) {
+		$protocol = '//';
 		$uri      = substr( $uri, 7 );
 	} elseif ( 0 === stripos( $uri, 'https://' ) ) {
 		$protocol = 'https://';
@@ -5799,7 +5799,7 @@ function wp_guess_url() {
 			}
 		}
 
-		$schema = is_ssl() ? 'https://' : 'http://'; // set_url_scheme() is not defined yet.
+		$schema = is_ssl() ? 'https://' : '//'; // set_url_scheme() is not defined yet.
 		$url    = $schema . $_SERVER['HTTP_HOST'] . $path;
 	}
 
@@ -6877,7 +6877,7 @@ function wp_auth_check_load() {
  */
 function wp_auth_check_html() {
 	$login_url      = wp_login_url();
-	$current_domain = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'];
+	$current_domain = ( is_ssl() ? 'https://' : '//' ) . $_SERVER['HTTP_HOST'];
 	$same_domain    = ( strpos( $login_url, $current_domain ) === 0 );
 
 	/**

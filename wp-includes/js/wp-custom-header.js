@@ -380,7 +380,7 @@
 		loadVideo: function() {
 			var handler = this,
 				video = document.createElement( 'div' ),
-				// @link http://stackoverflow.com/a/27728417
+				// @link //stackoverflow.com/a/27728417
 				VIDEO_ID_REGEX = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
 
 			video.id = 'wp-custom-header-video';

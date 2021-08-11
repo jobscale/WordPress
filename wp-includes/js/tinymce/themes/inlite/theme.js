@@ -4575,8 +4575,8 @@ var inlite = (function (domGlobals) {
     };
     var askAboutPrefix = function (editor, href) {
       return new global$c(function (resolve) {
-        editor.windowManager.confirm('The URL you entered seems to be an external link. Do you want to add the required http:// prefix?', function (result) {
-          var output = result === true ? 'http://' + href : href;
+        editor.windowManager.confirm('The URL you entered seems to be an external link. Do you want to add the required // prefix?', function (result) {
+          var output = result === true ? '//' + href : href;
           resolve(output);
         });
       });

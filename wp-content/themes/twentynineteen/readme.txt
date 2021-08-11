@@ -5,7 +5,7 @@ Requires at least: 4.9.6
 Tested up to: 5.8
 Stable tag: 2.1
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: //www.gnu.org/licenses/gpl-2.0.html
 
 Our 2019 default theme is designed to show off the power of the block editor.
 

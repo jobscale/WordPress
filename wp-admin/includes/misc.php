@@ -1275,7 +1275,7 @@ function wp_admin_canonical_url() {
 	}
 
 	// Ensure we're using an absolute URL.
-	$current_url  = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+	$current_url  = set_url_scheme( '//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
 	$filtered_url = remove_query_arg( $removable_query_args, $current_url );
 	?>
 	<link id="wp-admin-canonical" rel="canonical" href="<?php echo esc_url( $filtered_url ); ?>" />
@@ -1452,7 +1452,7 @@ function wp_check_php_version() {
 
 	$response = get_site_transient( 'php_check_' . $key );
 	if ( false === $response ) {
-		$url = 'http://api.wordpress.org/core/serve-happy/1.0/';
+		$url = '//api.wordpress.org/core/serve-happy/1.0/';
 		if ( wp_http_supports( array( 'ssl' ) ) ) {
 			$url = set_url_scheme( $url, 'https' );
 		}

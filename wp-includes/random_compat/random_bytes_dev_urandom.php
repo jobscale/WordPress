@@ -36,7 +36,7 @@ if (!is_callable('random_bytes')) {
      * random numbers in accordance with best practices
      *
      * Why we use /dev/urandom and not /dev/random
-     * @ref http://sockpuppet.org/blog/2014/02/25/safely-generate-random-numbers
+     * @ref //sockpuppet.org/blog/2014/02/25/safely-generate-random-numbers
      *
      * @param int $bytes
      *

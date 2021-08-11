@@ -122,7 +122,7 @@ class WP_Importer {
 		if ( is_numeric( $blog_id ) ) {
 			$blog_id = (int) $blog_id;
 		} else {
-			$blog   = 'http://' . preg_replace( '#^https?://#', '', $blog_id );
+			$blog   = '//' . preg_replace( '#^https?://#', '', $blog_id );
 			$parsed = parse_url( $blog );
 			if ( ! $parsed || empty( $parsed['host'] ) ) {
 				fwrite( STDERR, "Error: can not determine blog_id from $blog_id\n" );

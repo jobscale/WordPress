@@ -67,8 +67,8 @@ class WP_Sitemaps_Stylesheet {
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet
 		version="1.0"
-		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-		xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xsl="//www.w3.org/1999/XSL/Transform"
+		xmlns:sitemap="//www.sitemaps.org/schemas/sitemap/0.9"
 		exclude-result-prefixes="sitemap"
 		>
 
@@ -179,8 +179,8 @@ XSL;
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet
 		version="1.0"
-		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-		xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xsl="//www.w3.org/1999/XSL/Transform"
+		xmlns:sitemap="//www.sitemaps.org/schemas/sitemap/0.9"
 		exclude-result-prefixes="sitemap"
 		>
 
