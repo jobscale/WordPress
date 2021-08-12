@@ -1112,12 +1112,12 @@ function add_query_arg( ...$args ) {
 		$frag = '';
 	}
 
-	if ( 0 === stripos( $uri, '//' ) ) {
-		$protocol = '//';
-		$uri      = substr( $uri, 7 );
+	if ( 0 === stripos( $uri, 'http://' ) ) {
+		$protocol = 'http://';
+		$uri      = substr( $uri, strlen($protocol) );
 	} elseif ( 0 === stripos( $uri, 'https://' ) ) {
 		$protocol = 'https://';
-		$uri      = substr( $uri, 8 );
+		$uri      = substr( $uri, strlen($protocol) );
 	} else {
 		$protocol = '';
 	}
