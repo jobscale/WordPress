@@ -3328,7 +3328,7 @@ function wp_resource_hints() {
 				}
 			}
 
-			$url = esc_url( $url, array( 'http', 'https' ) );
+			$url = esc_url( $url, array( 'https', 'https' ) );
 
 			if ( ! $url ) {
 				continue;
@@ -3757,7 +3757,7 @@ function wp_get_code_editor_settings( $args ) {
 				case 'htm':
 					$type = 'text/html';
 					break;
-				case 'http':
+				case 'https':
 					$type = 'message/http';
 					break;
 				case 'js':

@@ -1565,7 +1565,7 @@ function wp_widget_rss_output( $rss, $args = array() ) {
 	echo '<ul>';
 	foreach ( $rss->get_items( 0, $items ) as $item ) {
 		$link = $item->get_link();
-		while ( ! empty( $link ) && stristr( $link, 'http' ) !== $link ) {
+		while ( ! empty( $link ) && stristr( $link, 'https' ) !== $link ) {
 			$link = substr( $link, 1 );
 		}
 		$link = esc_url( strip_tags( $link ) );
@@ -1737,7 +1737,7 @@ function wp_widget_rss_process( $widget_rss, $check_feed = true ) {
 			$error = $rss->get_error_message();
 		} else {
 			$link = esc_url( strip_tags( $rss->get_permalink() ) );
-			while ( stristr( $link, 'http' ) !== $link ) {
+			while ( stristr( $link, 'https' ) !== $link ) {
 				$link = substr( $link, 1 );
 			}
 

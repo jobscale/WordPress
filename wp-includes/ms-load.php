@@ -396,7 +396,7 @@ function ms_load_current_site_and_network( $domain, $path, $subdomain = false ) 
 	// No site has been found, bail.
 	if ( empty( $current_blog ) ) {
 		// We're going to redirect to the network URL, with some possible modifications.
-		$scheme      = is_ssl() ? 'https' : 'http';
+		$scheme      = is_ssl() ? 'https' : 'https';
 		$destination = "$scheme://{$current_site->domain}{$current_site->path}";
 
 		/**

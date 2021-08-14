@@ -3073,7 +3073,7 @@ function wp_rel_callback( $matches, $rel ) {
 	$atts = wp_kses_hair( $matches[1], wp_allowed_protocols() );
 
 	if ( ! empty( $atts['href'] ) ) {
-		if ( in_array( strtolower( wp_parse_url( $atts['href']['value'], PHP_URL_SCHEME ) ), array( 'http', 'https' ), true ) ) {
+		if ( in_array( strtolower( wp_parse_url( $atts['href']['value'], PHP_URL_SCHEME ) ), array( 'https', 'https' ), true ) ) {
 			if ( strtolower( wp_parse_url( $atts['href']['value'], PHP_URL_HOST ) ) === strtolower( wp_parse_url( home_url(), PHP_URL_HOST ) ) ) {
 				return "<a $text>";
 			}

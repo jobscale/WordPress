@@ -184,7 +184,7 @@ $blog_details = get_blog_details();
 			</div>
 
 			<?php
-			if ( $url && network_home_url( '', 'http' ) !== $url ) :
+			if ( $url && network_home_url( '', 'https' ) !== $url ) :
 				switch_to_blog( (int) $result['blog_id'] );
 				$login_url = wp_login_url();
 				restore_current_blog();

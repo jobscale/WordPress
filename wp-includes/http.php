@@ -515,7 +515,7 @@ function send_origin_headers() {
  */
 function wp_http_validate_url( $url ) {
 	$original_url = $url;
-	$url          = wp_kses_bad_protocol( $url, array( 'http', 'https' ) );
+	$url          = wp_kses_bad_protocol( $url, array( 'https', 'https' ) );
 	if ( ! $url || strtolower( $url ) !== strtolower( $original_url ) ) {
 		return false;
 	}

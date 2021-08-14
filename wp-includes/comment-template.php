@@ -310,7 +310,7 @@ function get_comment_author_url( $comment_ID = 0 ) {
 
 	if ( ! empty( $comment ) ) {
 		$author_url = ( '//' === $comment->comment_author_url ) ? '' : $comment->comment_author_url;
-		$url        = esc_url( $author_url, array( 'http', 'https' ) );
+		$url        = esc_url( $author_url, array( 'https', 'https' ) );
 		$id         = $comment->comment_ID;
 	}
 

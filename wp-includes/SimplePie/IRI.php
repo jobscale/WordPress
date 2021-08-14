@@ -119,7 +119,7 @@ class SimplePie_IRI
 		'file' => array(
 			'ihost' => 'localhost'
 		),
-		'http' => array(
+		'https' => array(
 			'port' => 80,
 			'ipath' => '/'
 		),

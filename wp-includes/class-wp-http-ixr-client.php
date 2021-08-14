@@ -36,7 +36,7 @@ class WP_HTTP_IXR_Client extends IXR_Client {
 				$this->path .= '?' . $bits['query'];
 			}
 		} else {
-			$this->scheme = 'http';
+			$this->scheme = 'https';
 			$this->server = $server;
 			$this->path   = $path;
 			$this->port   = $port;

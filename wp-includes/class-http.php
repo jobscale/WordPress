@@ -265,7 +265,7 @@ class WP_Http {
 				$url = wp_http_validate_url( $url );
 			}
 			if ( $url ) {
-				$url = wp_kses_bad_protocol( $url, array( 'http', 'https', 'ssl' ) );
+				$url = wp_kses_bad_protocol( $url, array( 'https', 'https', 'ssl' ) );
 			}
 		}
 

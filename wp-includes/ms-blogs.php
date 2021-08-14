@@ -46,7 +46,7 @@ function get_blogaddress_by_id( $blog_id ) {
 	}
 
 	$scheme = parse_url( $bloginfo->home, PHP_URL_SCHEME );
-	$scheme = empty( $scheme ) ? 'http' : $scheme;
+	$scheme = empty( $scheme ) ? 'https' : $scheme;
 
 	return esc_url( $scheme . '://' . $bloginfo->domain . $bloginfo->path );
 }

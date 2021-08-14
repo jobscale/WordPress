@@ -512,7 +512,7 @@ class SimplePie_Parser
 					if (!is_string($author)) {
 						$author = $this->parse_hcard($author);
 					}
-					else if (strpos($author, 'http') === 0) {
+					else if (strpos($author, 'https') === 0) {
 						if (isset($author_cache[$author])) {
 							$author = $author_cache[$author];
 						}

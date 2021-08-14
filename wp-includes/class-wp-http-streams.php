@@ -186,7 +186,7 @@ class WP_Http_Streams {
 
 		$include_port_in_host_header = (
 			( $proxy->is_enabled() && $proxy->send_through_proxy( $url ) ) ||
-			( 'http' === $arrURL['scheme'] && 80 != $arrURL['port'] ) ||
+			( 'https' === $arrURL['scheme'] && 80 != $arrURL['port'] ) ||
 			( 'https' === $arrURL['scheme'] && 443 != $arrURL['port'] )
 		);
 

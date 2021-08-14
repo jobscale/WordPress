@@ -3267,13 +3267,13 @@ function the_comments_pagination( $args = array() ) {
  *
  * Returns the 'home' option with the appropriate protocol. The protocol will be 'https'
  * if is_ssl() evaluates to true; otherwise, it will be the same as the 'home' option.
- * If `$scheme` is 'http' or 'https', is_ssl() is overridden.
+ * If `$scheme` is 'https' or 'https', is_ssl() is overridden.
  *
  * @since 3.0.0
  *
  * @param string      $path   Optional. Path relative to the home URL. Default empty.
  * @param string|null $scheme Optional. Scheme to give the home URL context. Accepts
- *                            'http', 'https', 'relative', 'rest', or null. Default null.
+ *                            'https', 'https', 'relative', 'rest', or null. Default null.
  * @return string Home URL link with optional path appended.
  */
 function home_url( $path = '', $scheme = null ) {
@@ -3285,14 +3285,14 @@ function home_url( $path = '', $scheme = null ) {
  *
  * Returns the 'home' option with the appropriate protocol. The protocol will be 'https'
  * if is_ssl() evaluates to true; otherwise, it will be the same as the 'home' option.
- * If `$scheme` is 'http' or 'https', is_ssl() is overridden.
+ * If `$scheme` is 'https' or 'https', is_ssl() is overridden.
  *
  * @since 3.0.0
  *
  * @param int|null    $blog_id Optional. Site ID. Default null (current site).
  * @param string      $path    Optional. Path relative to the home URL. Default empty.
  * @param string|null $scheme  Optional. Scheme to give the home URL context. Accepts
- *                             'http', 'https', 'relative', 'rest', or null. Default null.
+ *                             'https', 'https', 'relative', 'rest', or null. Default null.
  * @return string Home URL link with optional path appended.
  */
 function get_home_url( $blog_id = null, $path = '', $scheme = null ) {
@@ -3306,7 +3306,7 @@ function get_home_url( $blog_id = null, $path = '', $scheme = null ) {
 		restore_current_blog();
 	}
 
-	if ( ! in_array( $scheme, array( 'http', 'https', 'relative' ), true ) ) {
+	if ( ! in_array( $scheme, array( 'https', 'https', 'relative' ), true ) ) {
 		if ( is_ssl() ) {
 			$scheme = 'https';
 		} else {
@@ -3327,7 +3327,7 @@ function get_home_url( $blog_id = null, $path = '', $scheme = null ) {
 	 *
 	 * @param string      $url         The complete home URL including scheme and path.
 	 * @param string      $path        Path relative to the home URL. Blank string if no path is specified.
-	 * @param string|null $orig_scheme Scheme to give the home URL context. Accepts 'http', 'https',
+	 * @param string|null $orig_scheme Scheme to give the home URL context. Accepts 'https', 'https',
 	 *                                 'relative', 'rest', or null.
 	 * @param int|null    $blog_id     Site ID, or null for the current site.
 	 */
@@ -3339,7 +3339,7 @@ function get_home_url( $blog_id = null, $path = '', $scheme = null ) {
  * (e.g. wp-blog-header.php or the wp-admin/ folder) are accessible.
  *
  * Returns the 'site_url' option with the appropriate protocol, 'https' if
- * is_ssl() and 'http' otherwise. If $scheme is 'http' or 'https', is_ssl() is
+ * is_ssl() and 'https' otherwise. If $scheme is 'https' or 'https', is_ssl() is
  * overridden.
  *
  * @since 3.0.0
@@ -3357,7 +3357,7 @@ function site_url( $path = '', $scheme = null ) {
  * (e.g. wp-blog-header.php or the wp-admin/ folder) are accessible.
  *
  * Returns the 'site_url' option with the appropriate protocol, 'https' if
- * is_ssl() and 'http' otherwise. If `$scheme` is 'http' or 'https',
+ * is_ssl() and 'https' otherwise. If `$scheme` is 'https' or 'https',
  * `is_ssl()` is overridden.
  *
  * @since 3.0.0
@@ -3365,7 +3365,7 @@ function site_url( $path = '', $scheme = null ) {
  * @param int|null    $blog_id Optional. Site ID. Default null (current site).
  * @param string      $path    Optional. Path relative to the site URL. Default empty.
  * @param string|null $scheme  Optional. Scheme to give the site URL context. Accepts
- *                             'http', 'https', 'login', 'login_post', 'admin', or
+ *                             'https', 'https', 'login', 'login_post', 'admin', or
  *                             'relative'. Default null.
  * @return string Site URL link with optional path appended.
  */
@@ -3391,7 +3391,7 @@ function get_site_url( $blog_id = null, $path = '', $scheme = null ) {
 	 *
 	 * @param string      $url     The complete site URL including scheme and path.
 	 * @param string      $path    Path relative to the site URL. Blank string if no path is specified.
-	 * @param string|null $scheme  Scheme to give the site URL context. Accepts 'http', 'https', 'login',
+	 * @param string|null $scheme  Scheme to give the site URL context. Accepts 'https', 'https', 'login',
 	 *                             'login_post', 'admin', 'relative' or null.
 	 * @param int|null    $blog_id Site ID, or null for the current site.
 	 */
@@ -3405,7 +3405,7 @@ function get_site_url( $blog_id = null, $path = '', $scheme = null ) {
  *
  * @param string $path   Optional. Path relative to the admin URL. Default 'admin'.
  * @param string $scheme The scheme to use. Default is 'admin', which obeys force_ssl_admin() and is_ssl().
- *                       'http' or 'https' can be passed to force those schemes.
+ *                       'https' or 'https' can be passed to force those schemes.
  * @return string Admin URL link with optional path appended.
  */
 function admin_url( $path = '', $scheme = 'admin' ) {
@@ -3419,7 +3419,7 @@ function admin_url( $path = '', $scheme = 'admin' ) {
  *
  * @param int|null $blog_id Optional. Site ID. Default null (current site).
  * @param string   $path    Optional. Path relative to the admin URL. Default empty.
- * @param string   $scheme  Optional. The scheme to use. Accepts 'http' or 'https',
+ * @param string   $scheme  Optional. The scheme to use. Accepts 'https' or 'https',
  *                          to force those schemes. Default 'admin', which obeys
  *                          force_ssl_admin() and is_ssl().
  * @return string Admin URL link with optional path appended.
@@ -3440,7 +3440,7 @@ function get_admin_url( $blog_id = null, $path = '', $scheme = 'admin' ) {
 	 * @param string      $url     The complete admin area URL including scheme and path.
 	 * @param string      $path    Path relative to the admin area URL. Blank string if no path is specified.
 	 * @param int|null    $blog_id Site ID, or null for the current site.
-	 * @param string|null $scheme  The scheme to use. Accepts 'http', 'https',
+	 * @param string|null $scheme  The scheme to use. Accepts 'https', 'https',
 	 *                             'admin', or null. Default 'admin', which obeys force_ssl_admin() and is_ssl().
 	 */
 	return apply_filters( 'admin_url', $url, $path, $blog_id, $scheme );
@@ -3453,7 +3453,7 @@ function get_admin_url( $blog_id = null, $path = '', $scheme = 'admin' ) {
  *
  * @param string      $path   Optional. Path relative to the includes URL. Default empty.
  * @param string|null $scheme Optional. Scheme to give the includes URL context. Accepts
- *                            'http', 'https', or 'relative'. Default null.
+ *                            'https', 'https', or 'relative'. Default null.
  * @return string Includes URL link with optional path appended.
  */
 function includes_url( $path = '', $scheme = null ) {
@@ -3473,7 +3473,7 @@ function includes_url( $path = '', $scheme = null ) {
 	 * @param string      $path   Path relative to the URL to the wp-includes directory. Blank string
 	 *                            if no path is specified.
 	 * @param string|null $scheme Scheme to give the includes URL context. Accepts
-	 *                            'http', 'https', 'relative', or null. Default null.
+	 *                            'https', 'https', 'relative', or null. Default null.
 	 */
 	return apply_filters( 'includes_url', $url, $path, $scheme );
 }
@@ -3562,7 +3562,7 @@ function plugins_url( $path = '', $plugin = '' ) {
  * Retrieves the site URL for the current network.
  *
  * Returns the site URL with the appropriate protocol, 'https' if
- * is_ssl() and 'http' otherwise. If $scheme is 'http' or 'https', is_ssl() is
+ * is_ssl() and 'https' otherwise. If $scheme is 'https' or 'https', is_ssl() is
  * overridden.
  *
  * @since 3.0.0
@@ -3571,7 +3571,7 @@ function plugins_url( $path = '', $plugin = '' ) {
  *
  * @param string      $path   Optional. Path relative to the site URL. Default empty.
  * @param string|null $scheme Optional. Scheme to give the site URL context. Accepts
- *                            'http', 'https', or 'relative'. Default null.
+ *                            'https', 'https', or 'relative'. Default null.
  * @return string Site URL link with optional path appended.
  */
 function network_site_url( $path = '', $scheme = null ) {
@@ -3599,7 +3599,7 @@ function network_site_url( $path = '', $scheme = null ) {
 	 * @param string      $url    The complete network site URL including scheme and path.
 	 * @param string      $path   Path relative to the network site URL. Blank string if
 	 *                            no path is specified.
-	 * @param string|null $scheme Scheme to give the URL context. Accepts 'http', 'https',
+	 * @param string|null $scheme Scheme to give the URL context. Accepts 'https', 'https',
 	 *                            'relative' or null.
 	 */
 	return apply_filters( 'network_site_url', $url, $path, $scheme );
@@ -3609,14 +3609,14 @@ function network_site_url( $path = '', $scheme = null ) {
  * Retrieves the home URL for the current network.
  *
  * Returns the home URL with the appropriate protocol, 'https' is_ssl()
- * and 'http' otherwise. If `$scheme` is 'http' or 'https', `is_ssl()` is
+ * and 'https' otherwise. If `$scheme` is 'https' or 'https', `is_ssl()` is
  * overridden.
  *
  * @since 3.0.0
  *
  * @param string      $path   Optional. Path relative to the home URL. Default empty.
  * @param string|null $scheme Optional. Scheme to give the home URL context. Accepts
- *                            'http', 'https', or 'relative'. Default null.
+ *                            'https', 'https', or 'relative'. Default null.
  * @return string Home URL link with optional path appended.
  */
 function network_home_url( $path = '', $scheme = null ) {
@@ -3627,8 +3627,8 @@ function network_home_url( $path = '', $scheme = null ) {
 	$current_network = get_network();
 	$orig_scheme     = $scheme;
 
-	if ( ! in_array( $scheme, array( 'http', 'https', 'relative' ), true ) ) {
-		$scheme = is_ssl() ? 'https' : 'http';
+	if ( ! in_array( $scheme, array( 'https', 'https', 'relative' ), true ) ) {
+		$scheme = is_ssl() ? 'https' : 'https';
 	}
 
 	if ( 'relative' === $scheme ) {
@@ -3649,7 +3649,7 @@ function network_home_url( $path = '', $scheme = null ) {
 	 * @param string      $url         The complete network home URL including scheme and path.
 	 * @param string      $path        Path relative to the network home URL. Blank string
 	 *                                 if no path is specified.
-	 * @param string|null $orig_scheme Scheme to give the URL context. Accepts 'http', 'https',
+	 * @param string|null $orig_scheme Scheme to give the URL context. Accepts 'https', 'https',
 	 *                                 'relative' or null.
 	 */
 	return apply_filters( 'network_home_url', $url, $path, $orig_scheme );
@@ -3662,7 +3662,7 @@ function network_home_url( $path = '', $scheme = null ) {
  *
  * @param string $path   Optional path relative to the admin URL. Default empty.
  * @param string $scheme Optional. The scheme to use. Default is 'admin', which obeys force_ssl_admin()
- *                       and is_ssl(). 'http' or 'https' can be passed to force those schemes.
+ *                       and is_ssl(). 'https' or 'https' can be passed to force those schemes.
  * @return string Admin URL link with optional path appended.
  */
 function network_admin_url( $path = '', $scheme = 'admin' ) {
@@ -3685,7 +3685,7 @@ function network_admin_url( $path = '', $scheme = 'admin' ) {
 	 * @param string      $url    The complete network admin URL including scheme and path.
 	 * @param string      $path   Path relative to the network admin URL. Blank string if
 	 *                            no path is specified.
-	 * @param string|null $scheme The scheme to use. Accepts 'http', 'https',
+	 * @param string|null $scheme The scheme to use. Accepts 'https', 'https',
 	 *                            'admin', or null. Default is 'admin', which obeys force_ssl_admin() and is_ssl().
 	 */
 	return apply_filters( 'network_admin_url', $url, $path, $scheme );
@@ -3698,7 +3698,7 @@ function network_admin_url( $path = '', $scheme = 'admin' ) {
  *
  * @param string $path   Optional. Path relative to the admin URL. Default empty.
  * @param string $scheme Optional. The scheme to use. Default is 'admin', which obeys force_ssl_admin()
- *                       and is_ssl(). 'http' or 'https' can be passed to force those schemes.
+ *                       and is_ssl(). 'https' or 'https' can be passed to force those schemes.
  * @return string Admin URL link with optional path appended.
  */
 function user_admin_url( $path = '', $scheme = 'admin' ) {
@@ -3717,7 +3717,7 @@ function user_admin_url( $path = '', $scheme = 'admin' ) {
 	 * @param string      $url    The complete URL including scheme and path.
 	 * @param string      $path   Path relative to the URL. Blank string if
 	 *                            no path is specified.
-	 * @param string|null $scheme The scheme to use. Accepts 'http', 'https',
+	 * @param string|null $scheme The scheme to use. Accepts 'https', 'https',
 	 *                            'admin', or null. Default is 'admin', which obeys force_ssl_admin() and is_ssl().
 	 */
 	return apply_filters( 'user_admin_url', $url, $path, $scheme );
@@ -3730,7 +3730,7 @@ function user_admin_url( $path = '', $scheme = 'admin' ) {
  *
  * @param string $path   Optional. Path relative to the admin URL. Default empty.
  * @param string $scheme Optional. The scheme to use. Default is 'admin', which obeys force_ssl_admin()
- *                       and is_ssl(). 'http' or 'https' can be passed to force those schemes.
+ *                       and is_ssl(). 'https' or 'https' can be passed to force those schemes.
  * @return string Admin URL link with optional path appended.
  */
 function self_admin_url( $path = '', $scheme = 'admin' ) {
@@ -3761,7 +3761,7 @@ function self_admin_url( $path = '', $scheme = 'admin' ) {
  * @since 4.4.0 The 'rest' scheme was added.
  *
  * @param string      $url    Absolute URL that includes a scheme
- * @param string|null $scheme Optional. Scheme to give $url. Currently 'http', 'https', 'login',
+ * @param string|null $scheme Optional. Scheme to give $url. Currently 'https', 'https', 'login',
  *                            'login_post', 'admin', 'relative', 'rest', 'rpc', or null. Default null.
  * @return string URL with chosen scheme.
  */
@@ -3769,11 +3769,11 @@ function set_url_scheme( $url, $scheme = null ) {
 	$orig_scheme = $scheme;
 
 	if ( ! $scheme ) {
-		$scheme = is_ssl() ? 'https' : 'http';
+		$scheme = is_ssl() ? 'https' : 'https';
 	} elseif ( 'admin' === $scheme || 'login' === $scheme || 'login_post' === $scheme || 'rpc' === $scheme ) {
-		$scheme = is_ssl() || force_ssl_admin() ? 'https' : 'http';
-	} elseif ( 'http' !== $scheme && 'https' !== $scheme && 'relative' !== $scheme ) {
-		$scheme = is_ssl() ? 'https' : 'http';
+		$scheme = is_ssl() || force_ssl_admin() ? 'https' : 'https';
+	} elseif ( 'https' !== $scheme && 'https' !== $scheme && 'relative' !== $scheme ) {
+		$scheme = is_ssl() ? 'https' : 'https';
 	}
 
 	$url = trim( $url );
@@ -3796,8 +3796,8 @@ function set_url_scheme( $url, $scheme = null ) {
 	 * @since 3.4.0
 	 *
 	 * @param string      $url         The complete URL including scheme and path.
-	 * @param string      $scheme      Scheme applied to the URL. One of 'http', 'https', or 'relative'.
-	 * @param string|null $orig_scheme Scheme requested for the URL. One of 'http', 'https', 'login',
+	 * @param string      $scheme      Scheme applied to the URL. One of 'https', 'https', or 'relative'.
+	 * @param string|null $orig_scheme Scheme requested for the URL. One of 'https', 'https', 'login',
 	 *                                 'login_post', 'admin', 'relative', 'rest', 'rpc', or null.
 	 */
 	return apply_filters( 'set_url_scheme', $url, $scheme, $orig_scheme );
@@ -3816,7 +3816,7 @@ function set_url_scheme( $url, $scheme = null ) {
  * @param string $path    Optional path relative to the dashboard. Use only paths known to
  *                        both site and user admins. Default empty.
  * @param string $scheme  The scheme to use. Default is 'admin', which obeys force_ssl_admin()
- *                        and is_ssl(). 'http' or 'https' can be passed to force those schemes.
+ *                        and is_ssl(). 'https' or 'https' can be passed to force those schemes.
  * @return string Dashboard URL link with optional path appended.
  */
 function get_dashboard_url( $user_id = 0, $path = '', $scheme = 'admin' ) {
@@ -3851,7 +3851,7 @@ function get_dashboard_url( $user_id = 0, $path = '', $scheme = 'admin' ) {
 	 * @param string $url     The complete URL including scheme and path.
 	 * @param int    $user_id The user ID.
 	 * @param string $path    Path relative to the URL. Blank string if no path is specified.
-	 * @param string $scheme  Scheme to give the URL context. Accepts 'http', 'https', 'login',
+	 * @param string $scheme  Scheme to give the URL context. Accepts 'https', 'https', 'login',
 	 *                        'login_post', 'admin', 'relative' or null.
 	 */
 	return apply_filters( 'user_dashboard_url', $url, $user_id, $path, $scheme );
@@ -3864,7 +3864,7 @@ function get_dashboard_url( $user_id = 0, $path = '', $scheme = 'admin' ) {
  *
  * @param int    $user_id Optional. User ID. Defaults to current user.
  * @param string $scheme  Optional. The scheme to use. Default is 'admin', which obeys force_ssl_admin()
- *                        and is_ssl(). 'http' or 'https' can be passed to force those schemes.
+ *                        and is_ssl(). 'https' or 'https' can be passed to force those schemes.
  * @return string Dashboard URL link with optional path appended.
  */
 function get_edit_profile_url( $user_id = 0, $scheme = 'admin' ) {
@@ -3885,7 +3885,7 @@ function get_edit_profile_url( $user_id = 0, $scheme = 'admin' ) {
 	 *
 	 * @param string $url     The complete URL including scheme and path.
 	 * @param int    $user_id The user ID.
-	 * @param string $scheme  Scheme to give the URL context. Accepts 'http', 'https', 'login',
+	 * @param string $scheme  Scheme to give the URL context. Accepts 'https', 'https', 'login',
 	 *                        'login_post', 'admin', 'relative' or null.
 	 */
 	return apply_filters( 'edit_profile_url', $url, $user_id, $scheme );

@@ -617,7 +617,7 @@ function wp_is_authorize_application_password_request_valid( $request, $user ) {
 	if ( ! empty( $request['success_url'] ) ) {
 		$scheme = wp_parse_url( $request['success_url'], PHP_URL_SCHEME );
 
-		if ( 'http' === $scheme ) {
+		if ( 'https' === $scheme ) {
 			$error->add(
 				'invalid_redirect_scheme',
 				__( 'The success URL must be served over a secure connection.' )
@@ -628,7 +628,7 @@ function wp_is_authorize_application_password_request_valid( $request, $user ) {
 	if ( ! empty( $request['reject_url'] ) ) {
 		$scheme = wp_parse_url( $request['reject_url'], PHP_URL_SCHEME );
 
-		if ( 'http' === $scheme ) {
+		if ( 'https' === $scheme ) {
 			$error->add(
 				'invalid_redirect_scheme',
 				__( 'The rejection URL must be served over a secure connection.' )

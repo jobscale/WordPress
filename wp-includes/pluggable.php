@@ -1100,7 +1100,7 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 
 		// If https is required and request is http, redirect.
 		if ( $secure && ! is_ssl() && false !== strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) ) {
-			if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'http' ) ) {
+			if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'https' ) ) {
 				wp_redirect( set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ) );
 				exit;
 			} else {
@@ -1131,7 +1131,7 @@ if ( ! function_exists( 'auth_redirect' ) ) :
 
 			// If the user wants ssl but the session is not ssl, redirect.
 			if ( ! $secure && get_user_option( 'use_ssl', $user_id ) && false !== strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) ) {
-				if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'http' ) ) {
+				if ( 0 === strpos( $_SERVER['REQUEST_URI'], 'https' ) ) {
 					wp_redirect( set_url_scheme( $_SERVER['REQUEST_URI'], 'https' ) );
 					exit;
 				} else {
@@ -1467,7 +1467,7 @@ if ( ! function_exists( 'wp_validate_redirect' ) ) :
 	 */
 	function wp_validate_redirect( $location, $default = '' ) {
 		$location = wp_sanitize_redirect( trim( $location, " \t\n\r\0\x08\x0B" ) );
-		// Browsers will assume 'http' is your protocol, and will obey a redirect to a URL starting with '//'.
+		// Browsers will assume 'https' is your protocol, and will obey a redirect to a URL starting with '//'.
 		if ( '//' === substr( $location, 0, 2 ) ) {
 			$location = 'http:' . $location;
 		}
@@ -1484,8 +1484,8 @@ if ( ! function_exists( 'wp_validate_redirect' ) ) :
 			return $default;
 		}
 
-		// Allow only 'http' and 'https' schemes. No 'data:', etc.
-		if ( isset( $lp['scheme'] ) && ! ( 'http' === $lp['scheme'] || 'https' === $lp['scheme'] ) ) {
+		// Allow only 'https' and 'https' schemes. No 'data:', etc.
+		if ( isset( $lp['scheme'] ) && ! ( 'https' === $lp['scheme'] || 'https' === $lp['scheme'] ) ) {
 			return $default;
 		}
 

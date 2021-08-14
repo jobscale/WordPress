@@ -104,8 +104,8 @@ function get_file_description( $file ) {
  * @return string Full filesystem path to the root of the WordPress installation.
  */
 function get_home_path() {
-	$home    = set_url_scheme( get_option( 'home' ), 'http' );
-	$siteurl = set_url_scheme( get_option( 'siteurl' ), 'http' );
+	$home    = set_url_scheme( get_option( 'home' ), 'https' );
+	$siteurl = set_url_scheme( get_option( 'siteurl' ), 'https' );
 
 	if ( ! empty( $home ) && 0 !== strcasecmp( $home, $siteurl ) ) {
 		$wp_path_rel_to_home = str_ireplace( $home, '', $siteurl ); /* $siteurl - $home */
@@ -194,7 +194,7 @@ function wp_get_plugin_file_editable_extensions( $plugin ) {
 		'diff',
 		'htm',
 		'html',
-		'http',
+		'https',
 		'inc',
 		'include',
 		'js',
@@ -253,7 +253,7 @@ function wp_get_theme_file_editable_extensions( $theme ) {
 		'diff',
 		'htm',
 		'html',
-		'http',
+		'https',
 		'inc',
 		'include',
 		'js',

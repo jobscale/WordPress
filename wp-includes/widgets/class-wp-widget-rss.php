@@ -50,7 +50,7 @@ class WP_Widget_RSS extends WP_Widget {
 		}
 
 		$url = ! empty( $instance['url'] ) ? $instance['url'] : '';
-		while ( ! empty( $url ) && stristr( $url, 'http' ) !== $url ) {
+		while ( ! empty( $url ) && stristr( $url, 'https' ) !== $url ) {
 			$url = substr( $url, 1 );
 		}
 
@@ -74,7 +74,7 @@ class WP_Widget_RSS extends WP_Widget {
 				$title = strip_tags( $rss->get_title() );
 			}
 			$link = strip_tags( $rss->get_permalink() );
-			while ( ! empty( $link ) && stristr( $link, 'http' ) !== $link ) {
+			while ( ! empty( $link ) && stristr( $link, 'https' ) !== $link ) {
 				$link = substr( $link, 1 );
 			}
 		}

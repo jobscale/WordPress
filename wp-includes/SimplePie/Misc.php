@@ -195,25 +195,25 @@ class SimplePie_Misc
 	{
 		$url = SimplePie_Misc::normalize_url($url);
 		$parsed = SimplePie_Misc::parse_url($url);
-		if ($parsed['scheme'] !== '' && $parsed['scheme'] !== 'http' && $parsed['scheme'] !== 'https')
+		if ($parsed['scheme'] !== '' && $parsed['scheme'] !== 'https' && $parsed['scheme'] !== 'https')
 		{
-			return SimplePie_Misc::fix_protocol(SimplePie_Misc::compress_parse_url('http', $parsed['authority'], $parsed['path'], $parsed['query'], $parsed['fragment']), $http);
+			return SimplePie_Misc::fix_protocol(SimplePie_Misc::compress_parse_url('https', $parsed['authority'], $parsed['path'], $parsed['query'], $parsed['fragment']), $http);
 		}
 
 		if ($parsed['scheme'] === '' && $parsed['authority'] === '' && !file_exists($url))
 		{
-			return SimplePie_Misc::fix_protocol(SimplePie_Misc::compress_parse_url('http', $parsed['path'], '', $parsed['query'], $parsed['fragment']), $http);
+			return SimplePie_Misc::fix_protocol(SimplePie_Misc::compress_parse_url('https', $parsed['path'], '', $parsed['query'], $parsed['fragment']), $http);
 		}
 
 		if ($http === 2 && $parsed['scheme'] !== '')
 		{
 			return "feed:$url";
 		}
-		elseif ($http === 3 && strtolower($parsed['scheme']) === 'http')
+		elseif ($http === 3 && strtolower($parsed['scheme']) === 'https')
 		{
 			return substr_replace($url, 'podcast', 0, 4);
 		}
-		elseif ($http === 4 && strtolower($parsed['scheme']) === 'http')
+		elseif ($http === 4 && strtolower($parsed['scheme']) === 'https')
 		{
 			return substr_replace($url, 'itpc', 0, 4);
 		}

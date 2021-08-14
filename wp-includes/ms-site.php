@@ -686,8 +686,8 @@ function wp_initialize_site( $site_id, array $args = array() ) {
 	// Set up the database tables.
 	make_db_current_silent( 'blog' );
 
-	$home_scheme    = 'http';
-	$siteurl_scheme = 'http';
+	$home_scheme    = 'https';
+	$siteurl_scheme = 'https';
 	if ( ! is_subdomain_install() ) {
 		if ( 'https' === parse_url( get_home_url( $network->site_id ), PHP_URL_SCHEME ) ) {
 			$home_scheme = 'https';
