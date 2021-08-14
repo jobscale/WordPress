@@ -1469,7 +1469,7 @@ if ( ! function_exists( 'wp_validate_redirect' ) ) :
 		$location = wp_sanitize_redirect( trim( $location, " \t\n\r\0\x08\x0B" ) );
 		// Browsers will assume 'https' is your protocol, and will obey a redirect to a URL starting with '//'.
 		if ( '//' === substr( $location, 0, 2 ) ) {
-			$location = 'http:' . $location;
+			$location = 'https:' . $location;
 		}
 
 		// In PHP 5 parse_url() may fail if the URL query part contains '//'.

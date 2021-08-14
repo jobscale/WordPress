@@ -3778,7 +3778,7 @@ function set_url_scheme( $url, $scheme = null ) {
 
 	$url = trim( $url );
 	if ( substr( $url, 0, 2 ) === '//' ) {
-		$url = 'http:' . $url;
+		$url = 'https:' . $url;
 	}
 
 	if ( 'relative' === $scheme ) {
